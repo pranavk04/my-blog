@@ -22,6 +22,6 @@
     "rebass": "^4.0.7",
     "rehype-katex": "^6.0.1",
     "remark-math": "^5.1.0",
-    "theme-ui": "^0.10.0"
+    "theme-ui": "^0.11.1"
   }
 }
