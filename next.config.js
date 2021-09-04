@@ -1,2 +1,15 @@
-const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
-module.exports = withMDX({ pageExtensions: ['js', 'mdx'] })
+const remarkMath = import('remark-math')
+const rehypeKatex = import('rehype-katex')
+
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx$/,
+  options: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex]
+  }
+})
+
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'md', 'mdx']
+})
+
