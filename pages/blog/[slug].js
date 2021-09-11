@@ -1,6 +1,7 @@
 import { getAllPostSlugs, getPostData } from "../../lib/posts"
 import matter from "gray-matter"
 import Head from "next/head"
+import Link from 'next/link'
 import { serialize } from "next-mdx-remote/serialize"
 import { MDXRemote } from 'next-mdx-remote'
 
@@ -44,6 +45,10 @@ export default function Posts({ source, frontMatter }) {
 					<MDXRemote {...source} />
 				</article>
 				</div>
+
+				<Link href='/blog'>
+					<a>Back</a>
+				</Link>
 			</div>
 		</div>
 	);

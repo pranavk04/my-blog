@@ -1,9 +1,9 @@
-/** @jsxSourceImport theme-ui */
-
 function Footer() {
 	return (
 		<div>
-			<h1>TESTING</h1>
+			<div className="mt-auto mx-auto text-center p-4">
+				<span className="mb-5 mx-auto text-sm">Pranav Konda • © 2021</span>
+			</div>
 		</div>
 	)
 }

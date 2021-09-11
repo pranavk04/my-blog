@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { getSortedPosts } from "../../lib/posts";
 
+import BlogPost from '../../components/blog-post'
+
 const BlogIndex = ({ allPostsData }) => {
 	return (
-		<div>
-			<div>
-				<h1>My Blog!</h1>
+		<div className="mx-20">
+			<div className="text-center">
+				<h1 className="text-5xl mb-5 font-semibold text-primary-900">Blog</h1>
 			</div>
 	
 		<div>
@@ -16,24 +18,17 @@ const BlogIndex = ({ allPostsData }) => {
 					<li
 						key={slug}
 						>
-						<h2
-							key={title}
-							>
-
 							<Link
 								href='/blog/[slug]'
 								as={`/blog/${slug}`}
 								>
-								{title}
+								<a><BlogPost title={title} date={date} excerpt={exerpt} /></a>
 							</Link>
-						</h2>
-						<small>{date}</small>
-						<p>{exerpt}</p>
-					</li>
-				))}
-			</ul>
-	</div>
+						</li>
+					))}
+				</ul>
 		</div>
+	</div>
 	);
 };
 

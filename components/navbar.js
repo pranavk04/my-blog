@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import React, { Component, useState } from 'react'
 
+import { FaGithub, FaBars, FaDiscord } from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
+import { TiThMenu } from 'react-icons/ti'
+
 class NavLink extends Component {
 	render() {
 
@@ -16,21 +20,32 @@ class NavLink extends Component {
 
 function Navbar() {
 
-	const [expanded, setExpanded] = useState(true);
+	const [expanded, setExpanded] = useState(false);
 
 	return (
 		<div>
-			<div className="flex items-center justify-between flex-wrap p-10">
-
+			<div className="flex items-center justify-between flex-wrap px-20 py-10">
 				<div className="flex items-center flex-shrink-0 text-white mr-10">
 					<Link href='/'>
 						<span className="font-semibold text-2xl tracking-tight">Pranav</span>
 					</Link>
 				</div>
 
-				<div className="block lg:hidden">
-					<button onClick={() => {setExpanded(!expanded); console.log(expanded);}} class="flex items-center px-3 py-2 text-black-200">
-						      <svg className="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+				<div className="flex items-center px-3 py-2">
+					<a href="https://github.com/pranavk04/">
+						<FaGithub className=" lg:hidden fill-current h-5 w-5 mr-5" />
+					</a>
+
+					<a href="mailto:pranavk123455@gmail.com">
+						<HiOutlineMail className="lg:hidden h-5 w-5 mr-5" />
+					</a>
+
+					<a href="https://discordapp.com/users/392152085040332801/">
+						<FaDiscord className="lg:hidden h-5 w-5 mr-5" />
+					</a>
+
+					<button onClick={() => {setExpanded(!expanded); console.log(expanded);}}>
+						<TiThMenu className=" lg:hidden h-5 w-5" />
 					</button>
 				</div>
 
@@ -41,6 +56,20 @@ function Navbar() {
 						<NavLink where='/about-me' text='About Me' onPress={() => setExpanded(false)}/>
 						<NavLink where='/resources' text='Resources' onPress={() => setExpanded(false)}/>
 					</div>
+				</div>
+
+				<div className="lg:flex py-2 px-3 fill-current hidden lg:items-center lg:w-auto">
+					<a href="https://github.com/pranavk04/">
+						<FaGithub className="w-5 h-5 ml-5" />
+					</a>
+
+					<a href="mailto:pranavk123455@gmail.com">
+						<HiOutlineMail className="w-5 h-5 ml-5"/>
+					</a>
+
+					<a href="https://discordapp.com/users/392152085040332801/">
+						<FaDiscord className="h-5 w-5 ml-5" />
+					</a>
 				</div>
 			</div>
 		</div>
