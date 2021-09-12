@@ -29,19 +29,19 @@ module.exports = {
           },
         },
       }),
+    colors: {
+      primary: colors.rose, // 800 weight is what we want
+      accent: colors.blue,  // 100 weight is what we want 
+      secondary: colors.emerald, 
+      highlight: colors.purple,
+      gray: colors.trueGray,
+    }, 
     },
     lineHeight: {
       11: '2.75rem', 
       12: '3rem', 
       13: '3.25rem', 
       14: '3.5rem', 
-    }, 
-    colors: {
-      primary: colors.blue, // 800 weight is what we want
-      accent: colors.rose,  // 100 weight is what we want 
-      secondary: colors.emerald, 
-      highlight: colors.purple,
-      gray: colors.trueGray,
     }, 
   },
   variants: {
