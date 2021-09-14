@@ -7,20 +7,21 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start", 
+    "start": "next start",
     "cache-posts": "node scripts/cache.js"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn cache-posts && git add cache/data.js"
     }
-  }, 
+  },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.4",
+    "emailjs-com": "^3.2.0",
     "gray-matter": "^4.0.3",
     "husky": "^7.0.2",
     "next": "^11.1.0",

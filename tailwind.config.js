@@ -18,7 +18,6 @@ module.exports = {
             },
             h2: {
               color: theme('colors.accent.600'), 
-              textAlign: 'center',
               letterSpacing: theme('letterSpacing.tight'), 
               fontWeight: '700',
             },

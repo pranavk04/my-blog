@@ -45,7 +45,7 @@ const BlogIndex = ({ allPostsData }) => {
 	}, [])
 
 	return (
-		<div className="mx-20">
+		<div>
 			<div className="text-center">
 				<h1 className="text-5xl mb-5 font-semibold text-primary-900">Blog</h1>
 			</div>

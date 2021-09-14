@@ -5,8 +5,8 @@ export default function layout({ children }) {
 	return (
 		<div className="flex flex-col justify-between h-screen">
 			<NavBar />
-			<main className="mb-auto">{children}</main>
-			<Footer />
+			<main className="content-center max-w-2xl mx-auto mb-auto">{children}</main>
+			<Footer/>
 		</div>
 	)
 }

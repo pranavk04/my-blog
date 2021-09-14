@@ -12,7 +12,8 @@ function getPosts() {
 		const matterResult = matter(fileContents)
 		return {
 			id, 
-			title: matterResult.data.title
+			title: matterResult.data.title, 
+			excerpt: matterResult.data.exerpt,
 		}
 	})
 	return JSON.stringify(posts)
