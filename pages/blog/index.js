@@ -69,7 +69,7 @@ const BlogIndex = ({ allPostsData }) => {
 						{results.map(({ slug, date, title, exerpt }) => (
 							<li key={slug}>
 								<Link href='/blog/[slug]' as={`/blog/${slug}`}>
-							<a><BlogPost title={title} date={date} excerpt={excerpt} /></a>
+							<a><BlogPost title={title} date={date} excerpt={exerpt} /></a>
 								</Link>
 							</li>
 						))}

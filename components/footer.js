@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function Footer() {
 	return (
-		<div className="mt-4">
+		<div className="mt-20">
 			<div className="bg-black mt-auto mx-auto px-4 py-8">
 
 				<div className="mx-auto max-w-3xl content-center text-center text-white grid grid-cols-4 gap-4">
