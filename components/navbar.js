@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, { Component, useState } from 'react'
 
 import { FaGithub, FaBars, FaDiscord } from 'react-icons/fa'
+import { Icon } from '@iconify/react'
 import { HiOutlineMail } from 'react-icons/hi'
 import { TiThMenu } from 'react-icons/ti'
 
@@ -36,15 +37,11 @@ function Navbar() {
 						<FaGithub className=" lg:hidden fill-current h-5 w-5 mr-5" />
 					</a>
 
-					<a href="mailto:pranavk123455@gmail.com">
-						<HiOutlineMail className="lg:hidden h-5 w-5 mr-5" />
-					</a>
-
 					<a href="https://discordapp.com/users/392152085040332801/">
-						<FaDiscord className="lg:hidden h-5 w-5 mr-5" />
+						<Icon icon="simple-icons:discord" className="lg:hidden h-5 w-5 mr-5" />
 					</a>
 
-					<button onClick={() => {setExpanded(!expanded); console.log(expanded);}}>
+					<button onClick={() => setExpanded(!expanded)}>
 						<TiThMenu className=" lg:hidden h-5 w-5" />
 					</button>
 				</div>
@@ -63,12 +60,8 @@ function Navbar() {
 						<FaGithub className="w-5 h-5 ml-5" />
 					</a>
 
-					<a href="mailto:pranavk123455@gmail.com">
-						<HiOutlineMail className="w-5 h-5 ml-5"/>
-					</a>
-
 					<a href="https://discordapp.com/users/392152085040332801/">
-						<FaDiscord className="h-5 w-5 ml-5" />
+						<Icon icon="simple-icons:discord" className="h-5 w-5 ml-5" />
 					</a>
 				</div>
 			</div>

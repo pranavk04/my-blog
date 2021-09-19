@@ -11,20 +11,20 @@ function Footer() {
 					<div className="font-semibold text-xl">Tech</div>
 					<div className="font-semibold text-xl">Writing</div>
 
-					<div>About Me</div>
-					<div>Handouts</div>
-					<div>Website</div>
-					<div>Blog</div>
+					<div><Link href="/about-me"><a>About Me</a></Link></div>
+					<div><Link href="/handouts"><a>Handouts</a></Link></div>
+					<div><Link href="/website"><a>Website</a></Link></div>
+					<div><Link href="/blog"><a>Blog</a></Link></div>
 
 					<div>CV</div>
-					<div>Lectures</div>
-					<div>Projects</div>
-					<div>Ratings</div>
+					<div><Link href="/lectures"><a>Lectures</a></Link></div>
+					<div><Link href="/projects"><a>Projects</a></Link></div>
+					<div><Link href="/ratings"><a>Ratings</a></Link></div>
 					
-					<div>Contact</div>
-					<div>Guides</div>
-					<div>Configs</div>
-					<div>Suggest</div>
+					<div><Link href="/contact"><a>Contact</a></Link></div>
+					<div><Link href="/guides"><a>Guides</a></Link></div>
+					<div><Link href="/configs"><a>Configs</a></Link></div>
+					<div><Link href="/suggest"><a>Suggest</a></Link></div>
 				</div>
 			</div>
 		</div>

@@ -16,12 +16,15 @@
     }
   },
   "dependencies": {
+    "@iconify/react": "^3.0.1",
+    "@maggieliu/reactive": "^1.2.10",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.4",
     "emailjs-com": "^3.2.0",
+    "firebase": "^9.0.2",
     "gray-matter": "^4.0.3",
     "husky": "^7.0.2",
     "next": "^11.1.0",
@@ -31,6 +34,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-textarea-autosize": "^8.3.3",
     "rehype-katex": "^6.0.1",
     "rehype-prism-plus": "^1.0.0",
     "remark-math": "3.0.0",

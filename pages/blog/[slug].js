@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { getAllPostSlugs, getPostData } from "../../lib/posts"
 import matter from "gray-matter"
 import Head from "next/head"
@@ -11,6 +12,11 @@ import remarkParse from 'remark-parse'
 import rehypeKatex from 'rehype-katex'
 import rehypePrism from 'rehype-prism-plus'
 
+import Reactive from '../../components/reactive'
+
+import { IoChevronBack } from 'react-icons/io'
+import { FaGithub } from 'react-icons/fa'
+import { IoIosArrowBack } from 'react-icons/io'
 // import 'prism-themes/themes/prism-synthwave84.css'
 // import hydrate from "next-mdx-remote/hydrate"
 
@@ -18,7 +24,9 @@ import rehypePrism from 'rehype-prism-plus'
 
 export default function Posts({ source, frontMatter }) {
 	// const content = hydrate(source, { components });
-	
+	//
+	const [showComments, setShowComments] = React.useState(true);
+
 	return (
 		<div>
 			<Head>
@@ -33,22 +41,36 @@ export default function Posts({ source, frontMatter }) {
 			</Head>
 
 			<div>
+
+				<Link href='/blog'>
+					<div className="flex flex-row items-center"> 
+						<IoIosArrowBack className="text-accent-900 text-xl"/>
+						<a className="text-accent-900 font-semibold text-xl ">Back</a>
+					</div>
+				</Link>
+
 				<div className="text-center">
-					<h1 className="text-primary-900 text-5xl mb-2 font-bold">{frontMatter.title}</h1>
-					<span className="text-gray-600 text-lg">Date: {frontMatter.date}</span>
+					<h1 className="text-primary-900 text-3xl md:text-5xl md:mb-2 font-bold">{frontMatter.title}</h1>
+					<span className="text-gray-600 text-lg">{frontMatter.date}</span>
 				</div>
 
 				<hr className="mt-8 border-t-2 w-20 mx-auto" />
 
 				<div className="flex">
-				<article className="mt-8 mx-auto prose">
-					<MDXRemote {...source} />
-				</article>
+					<article className="mt-8 mx-auto prose">
+						<MDXRemote {...source} />
+					</article>
 				</div>
 
-				<Link href='/blog'>
-					<a>Back</a>
-				</Link>
+				<button className="flex mx-auto font-semibold text-white border-2 rounded border-black bg-black px-2 py-1 mt-8" onClick={() => setShowComments(!showComments)}>
+					{ showComments && <div>Show Comments!</div>} { !showComments && <div>Hide Comments!</div> }
+				</button>
+
+				{ !showComments &&
+					<div className="flex mx-auto max-w-lg">
+						<Reactive />
+					</div>
+				}
 			</div>
 		</div>
 	);

@@ -9,7 +9,6 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'), 
             h1: {
               color: theme('colors.accent.700'),
               textAlign: 'center',
@@ -17,7 +16,7 @@ module.exports = {
               fontWeight: '700',
             },
             h2: {
-              color: theme('colors.accent.600'), 
+              color: theme('colors.accent.900'), 
               letterSpacing: theme('letterSpacing.tight'), 
               fontWeight: '700',
             },
@@ -30,7 +29,7 @@ module.exports = {
       }),
     colors: {
       primary: colors.rose, // 800 weight is what we want
-      accent: colors.blue,  // 100 weight is what we want 
+      accent: colors.sky,  // 100 weight is what we want 
       secondary: colors.emerald, 
       highlight: colors.purple,
       gray: colors.trueGray,

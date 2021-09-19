@@ -46,8 +46,8 @@ const BlogIndex = ({ allPostsData }) => {
 
 	return (
 		<div>
-			<div className="text-center">
-				<h1 className="text-5xl mb-5 font-semibold text-primary-900">Blog</h1>
+			<div className="">
+		<h1 className="text-center text-3xl md:text-5xl mb-3 md:mb-5 font-semibold text-primary-900">Blog</h1>
 			</div>
 	
 		<div>
@@ -61,7 +61,7 @@ const BlogIndex = ({ allPostsData }) => {
 						placeholder='Search Posts!'
 						type='text'
 						value={query}
-						className="mt-5 rounded focus:outline-none focus:border-primary-900"
+						className="mt-5 rounded"
 					/>
 				</div>
 				{ active && results.length > 0 && (
