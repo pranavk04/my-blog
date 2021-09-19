@@ -1,7 +1,7 @@
 function Home() {
 	return (
 		<div>
-			<h1 className="text-center text-primary-900 mb-4 font-semibold text-3xl md:text-xl tracking-tight">Hi! I'm Pranav! </h1>
+			<h1 className="text-center text-primary-900 mb-4 font-semibold text-3xl md:text-5xl tracking-tight">Hi! I'm Pranav! </h1>
 
 			<div className="space-y-4">
 				<p>Welcome to my personal site and blog! To learn more about me, you can go to the About Me page. To learn more about what this site aims to do, you can read on below!</p>
