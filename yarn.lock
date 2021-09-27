@@ -2080,7 +2080,7 @@ get-port@^3.2.0:
   resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.2.0.tgz#dd7ce7de187c06c8bf353796ac71e099f0980ebc"
   integrity sha1-3Xzn3hh8Bsi/NTeWrHHgmfCYDrw=
 
-glob-parent@^5.1.2, glob-parent@~5.1.2:
+glob-parent@^5.1.2, glob-parent@~5.1.0, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
   integrity sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
@@ -2091,13 +2091,6 @@ glob-parent@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-6.0.1.tgz#42054f685eb6a44e7a7d189a96efa40a54971aa7"
   integrity sha512-kEVjS71mQazDBHKcsq4E9u/vUzaLcw1A8EtUeydawvIWQCJM0qQ08G1H7/XTjFUulla6XQiDOG6MXSaG0HDKog==
-  dependencies:
-    is-glob "^4.0.1"
-
-glob-parent@~5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.0.tgz#5f4c1d1e748d30cd73ad2944b3577a81b081e8c2"
-  integrity sha512-qjtRgnIVmOfnKUE3NJAQEdk+lKrxfw8t5ke7SXtfMTHcjsBfOfWXCQfdb30zfDoZQ2IRSIiidmjtbHZPZ++Ihw==
   dependencies:
     is-glob "^4.0.1"
 
@@ -2879,12 +2872,7 @@ lodash.uniq@4.5.0, lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.19:
-  version "4.17.19"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
-  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
-
-lodash@^4.17.21:
+lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -4054,19 +4042,12 @@ resolve-from@^5.0.0:
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-5.0.0.tgz#c35225843df8f776df21c57557bc087e9dfdfc69"
   integrity sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
 
-resolve@^1.20.0:
+resolve@^1.20.0, resolve@^1.3.2:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
   integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
   dependencies:
     is-core-module "^2.2.0"
-    path-parse "^1.0.6"
-
-resolve@^1.3.2:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.15.0.tgz#1b7ca96073ebb52e741ffd799f6b39ea462c67f5"
-  integrity sha512-+hTmAldEGE80U2wJJDC1lebb5jWqvTYAfm3YZ1ckk1gBr0MnCqUKlwK1e+anaFljIl+F5tR5IoZcm4ZDA1zMQw==
-  dependencies:
     path-parse "^1.0.6"
 
 reusify@^1.0.4:
@@ -4468,10 +4449,10 @@ supports-color@^8.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-tailwindcss@^2.2.14:
-  version "2.2.14"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.2.14.tgz#7f71ce6783a5e9768bd0e2ad1cb48eefba42e2ca"
-  integrity sha512-gQQPKbV8qb8GthGhJGbRR+lKluSpFq+L78CJZLmqumEBKPMDkD+l5wFlOTzlOhWozG4S1I9AUSaPkD1EfnNsug==
+tailwindcss@^2.2.16:
+  version "2.2.16"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.2.16.tgz#32f81bdf1758b639cb83b9d30bf7cbecdda49e5e"
+  integrity sha512-EireCtpQyyJ4Xz8NYzHafBoy4baCOO96flM0+HgtsFcIQ9KFy/YBK3GEtlnD+rXen0e4xm8t3WiUcKBJmN6yjg==
   dependencies:
     arg "^5.0.1"
     bytes "^3.0.0"
