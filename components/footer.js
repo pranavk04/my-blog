@@ -5,13 +5,13 @@ function Footer() {
 		<div className="mt-20">
 			<div className="bg-black mt-auto mx-auto px-4 py-8">
 
-				<div className="mx-auto max-w-3xl content-center text-center text-white grid grid-cols-4 gap-4">
-					<div className="font-semibold text-xl">Pranav</div>
-					<div className="font-semibold text-xl">Resources</div>
-					<div className="font-semibold text-xl">Tech</div>
-					<div className="font-semibold text-xl">Writing</div>
+				<div className="mx-auto max-w-xs sm:max-w-md md:max-w-3xl content-center text-center text-white grid grid-cols-4 gap-4">
+					<div className="font-semibold text-lg md:text-xl">Pranav</div>
+					<div className="font-semibold text-lg md:text-xl">Resources</div>
+					<div className="font-semibold text-lg md:text-xl">Tech</div>
+					<div className="font-semibold text-lg md:text-xl">Writing</div>
 
-					<div><Link href="/about-me"><a>About Me</a></Link></div>
+					<div><Link href="/about-me"><a>About</a></Link></div>
 					<div><Link href="/handouts"><a>Handouts</a></Link></div>
 					<div><Link href="/website"><a>Website</a></Link></div>
 					<div><Link href="/blog"><a>Blog</a></Link></div>

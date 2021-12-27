@@ -25,7 +25,7 @@ function Navbar() {
 
 	return (
 		<div>
-			<div className="bg-black text-white flex items-center justify-between flex-wrap px-20 py-5 mb-20">
+			<div className="bg-black text-white flex items-center justify-between flex-wrap px-10 md:px-20 py-5 mb-20">
 				<div className="flex items-center flex-shrink-0 mr-10">
 					<Link href='/'>
 						<span className="font-semibold text-2xl tracking-tight">Pranav</span>
