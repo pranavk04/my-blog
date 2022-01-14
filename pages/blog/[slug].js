@@ -59,18 +59,10 @@ export default function Posts({ source, frontMatter }) {
 				<div className="flex">
 					<article className="mt-8 mx-auto prose">
 						<MDXRemote {...source} />
+						<Reactive />
 					</article>
 				</div>
 
-				<button className="flex mx-auto font-semibold text-white border-2 rounded border-black bg-black px-2 py-1 mt-8" onClick={() => setShowComments(!showComments)}>
-					{ showComments && <div>Show Comments!</div>} { !showComments && <div>Hide Comments!</div> }
-				</button>
-
-				{ !showComments &&
-					<div className="flex mx-auto max-w-lg">
-						<Reactive />
-					</div>
-				}
 			</div>
 		</div>
 	);

@@ -5,6 +5,9 @@ module.exports = {
   purge: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'sans': ['"Avenir"'], 
+    }, 
     extend: {
       typography: (theme) => ({
         DEFAULT: {
@@ -23,13 +26,12 @@ module.exports = {
             h3: {
               color: theme('colors.accent.500'),
             }
-
           },
         },
       }),
     colors: {
-      primary: colors.rose, // 800 weight is what we want
-      accent: colors.sky,  // 100 weight is what we want 
+      primary: colors.sky, // 800 weight is what we want
+      accent: colors.rose,  // 100 weight is what we want 
       secondary: colors.emerald, 
       highlight: colors.purple,
       gray: colors.trueGray,
