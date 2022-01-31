@@ -1,0 +1,72 @@
+---
+title: "Config: LaTeX"
+author: ""
+date: "1/28/2022"
+exerpt: "Making LaTeX a convenient way to take notes in class!"
+---
+# Introduction
+LaTeX is an essential thing to learn if you're going to be writing anything related to math,
+which is a very broad spectrum of things. Of course there's math itself, but also physics, 
+chemistry, biology, and the like. There's also the raw power of LaTeX as a document processor.
+Once you've learned LaTeX though, you might wonder how to use it quickly and 
+effectively to do something like take notes in class. 
+
+Over the past 3 years, I've been using LaTeX to take notes in higher level math classes while
+sitting in lectures, and it's actually quite an effective setup if done properly. While 
+typing speed is probably the biggest limiting factor, having some of the following tools
+can really boost your speed at LaTeX and make taking beautiful notes a reality and not a dream!
+
+With that being said, let's dive into the details.
+
+## The Editor 
+Obviously, you need something to type your code in. And while online LaTeX editors do exist, 
+such as Overleaf, these are not ideal for speed. The fastest way to edit LaTeX is going to be 
+on your own machine, preferrably with a lightweight text editor. I use `vim` to accomplish
+this task, with a few plugins. 
+
+With its modal editing, vim is perfect for getting things done quickly. There are wonderful
+plugins, specifically vim LaTeX suite, which make vim an ideal place to do everything 
+LaTeX related. 
+
+With simple *macros* that expand into full LaTeX commands (which also happen to be called macros), 
+such as ``i` expanding to `\int_{<++>}^{<++>}`, the plugin is a really efficient way to 
+type while someone is explaining live. 
+
+Combining this with `coc.nvim` for linting and autocomplete makes a really smooth experience, 
+as it uses the TeXLab language server to deliver fast linting and command completion. It's 
+also really lightweight. 
+
+## Compiler
+While it's not *really* a compiler, `latexmk` is a script which I use to call the compiler for 
+my LaTeX code. It's smart about compiling things in an efficient manner, and even provides the 
+option for a live preview of your work! Simply call the `-pvc` option when inputting the command
+in your terminal to have it autorefresh your pdf in the background. You need to use the `-pdf` flag
+to actually compile to a pdf though, since the default is `djvu` like most LaTeX compilation systems. 
+
+Using a pdf viewer that's compatilble with background refreshes is also important. I'd recommend 
+using Skim if you're on a MacBook, `zathura` if you're on Linux (this is my favorite pdf viewer, 
+as it has vim like keybinds!!), and SumatraPDF for Windows. 
+
+## Class file
+I have my own class file, `yozora.cls` (so named because I have environment themeing meant to look like 
+the night sky, or 夜空), which contains a lot of custom macros for longer commands
+that I use, just to make things even easier on me. I have a couple common ones, like `\RR` for 
+`\mathbb R`, but also ones that I have to type a lot for my classes. I also have a couple document 
+styling parameters set, like the font and page margins. 
+
+## Workflow
+Typically I'll begin by opening 2 sessions of my terminal, one for vim and one for latexmk. Once 
+it starts up, the pdf file preview pops up (sizing this is easy because I have a tiling window manager)
+and I write LaTeX code while I'm in my lecture. I always write my changes to see the preview once I've 
+finished coding a "piece" of the problem at hand or the theorem on the board. This allows me to catch any 
+errors and also grasp the concept better by seeing it in my own framework. 
+
+## Shortcomings and Wrapping Up
+The biggest issue I have at the moment is diagrams. and while I've seen some setups for this before, 
+I don't think diagrams are something I really need to do while I'm in a lecture, as I'm not taking any
+pure geometry classes! 
+
+Overall, I think that having a locally installed and *tailored* LaTeX setup is going to beat an online 
+platform every time, both for ease of use and speed. While being able to collaborate is useful (and what
+I think should be the intended use of online platforms), nothing beats having the ability to write 
+LaTeX when your wifi is down!

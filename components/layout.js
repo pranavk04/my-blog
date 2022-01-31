@@ -7,7 +7,6 @@ export default function layout({ children }) {
 		<div className="flex justify-center min-h-screen">
 			<div className='px-10 py-5 w-full max-w-screen-xl'>
 				<NavBar />
-				<div className='my-2' />
 				<div className='grid grid-cols-1 gap-y-8 sm:grid-cols-3 md:grid-cols-4 gap-x-10'>
 					<div className='order-first'>
 						<SideNav />
@@ -18,6 +17,7 @@ export default function layout({ children }) {
 						</div>
 					</div>
 				</div>
+				{/* <Footer /> */}
 			</div>
 		</div>
 	)

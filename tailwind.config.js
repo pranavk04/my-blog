@@ -30,10 +30,13 @@ module.exports = {
         },
       }),
     colors: {
+      // primary: colors.brown,
+      // accent: colors.fuchsia,
       primary: colors.sky, // 800 weight is what we want
       accent: colors.rose,  // 100 weight is what we want 
-      secondary: colors.emerald, 
-      highlight: colors.purple,
+      secondary: '#fdf6e3',
+      // secondary: colors.emerald, 
+      // highlight: colors.purple,
       gray: colors.trueGray,
     }, 
     },
