@@ -1,0 +1,91 @@
+---
+title: "Operating Systems"
+date: "5/12/22"
+excerpt: "a.k.a windows bad but it's supposed to be more nuanced"
+---
+
+Choosing an operating system is a big decision, because it defines how you will interact with your computer. 
+Most of the time, you are shipped a computer that has Windows on it by default. 
+
+Windows works, but it doesn't work very well. It's pretty resource heavy (bye-bye RAM!) so it won't play well
+with old hardware. If you're a developer or program on a semi-regular basis, Windows just sucks. It's also 
+pretty restrictive, since it's a proprietary operating system, which means you don't have smart people making 
+cool things on it as easily. 
+
+Enter (to no one's surprise...) Linux, which solves all of those problems. Except there are hundreds of
+different flavors of Linux (distros) so it can get confusing. But at least they all use the same kernel (the 
+layer between your OS and your hardware). For a beginner, I'd recommend Linux Mint over the traditional
+recommendation of Ubuntu. 
+
+I wholehartedly recommend Linux over Windows because it's faster, uses much less resources, and is open-source!
+This means you absolutely get smart people making really cool things that you can use. 
+
+One of the "essentials" that I've gotten used to is having a tiling window manager which 
+automatically sizes and snaps my windows into place when I open new ones. Or everything just being more 
+terminal-oriented. I really like using the terminal, it's a lot faster than clicking (assuming you can type
+reasonably well), and Linux is really kind to terminal users. 
+
+On my desktop, I like to use Arch Linux, which is a more barebones version of Linux that requires you to 
+figure things out for yourself. It's rather time consuming, which is a disadvantage, but it allows you
+to choose what you want to install and forces you to know what you're doing and installing. 
+
+Arch in particular has a very comprehensive wiki which it's famous for, and a large repository of 
+packages (both official and "unofficial") so you can basically install whatever you want with `pacman`, the
+package manager. Which is the best package manager ever by the way. It's blazing fast and really featureful!
+
+Also, the Windows API is pretty bad to work with. I've tried it before, but the amount of pandering you 
+have to do for legacy systems (think 16-bit) is really tiring. I like Microsoft's commitment to 
+backward compatibility, but if you're writing an application for a modern user, including code fragments
+for an operating system from 15 years ago isn't going to help anyone. 
+
+The traditional argument of "what about my games?" has also fallen to the wayside recently. With the advent of 
+proton, gaming on Linux has gotten *really* good. Like to the point where it outperforms Windows sometimes and 
+matches it the rest of the time. Aside from a few games with really invasive anticheating software (looking at
+you, Valorant[^1]), proton has gotten really good. 
+
+Of course, you can't completely escape Windows. For instance, the drawing software I use, Clip Studio Paint, 
+doesn't have a Linux port. Similarly, industry CAD software (cough cough Solidworks) is notably absent from 
+Linux too. 
+
+But that's okay, because you can always install Windows on a separate partition (like I do) and have it run 
+there for when you need it. Or end up using it more often because you got tired of having to configure 
+Arch. (￣ー￣；
+
+However, you might have noticed at this point that one OS is notably absent. Yes, MacOS exists too!
+Ironically, I use OSX more often than Windows and Linux at this point, because my laptop is a 
+MacBook Pro. MacOS is based on BSD, which is a Unix derivative. This means a lot of shared qualities 
+with Linux, if you're willing to walk on the edges of the "walled garden". 
+
+I have a tiling window manager on my Mac too, `yabai`! It's basically a clone of `bspwm`, down to the 
+hotkey manager that you configure it with[^2]. I also have my own top bar widget, like `polybar` you would 
+find on Linux. 
+
+Almost all the terminal programs I use regularly also work on MacOS, since I can install the ``gcc`` versions
+of core utilities with ``brew`` (Homebrew), the OSX package manager. I like the base look of MacOS, which 
+surprisingly plays a nontrivial reason in why I choose to use it on my laptop over a Linux distribution. 
+It also just, *works*, which I now value. I don't want to think about configuring all of the laptop-specific
+things on Arch (made worse by the T2 chip[^3]), and as the old adage goes: "if it ain't broke, don't fix it."
+
+But hey, you could watch anime in your terminal on any one of the three OSes we talked about today, so
+does it really matter in the end?[^4]
+
+Perhaps not.
+
+[^1]: I learned recently that Valorant's anticheat software actually taps into the Windows kernel
+and basically gains full access to the user's entire computer. While I too think cheating in videogames
+is a problem (the first time I played Hypixel Bedwars, the enemy team could *fly*!), that's a bit 
+excessive in my opinion. 
+
+[^2]: These window managers represent windows as leaves of a binary tree, so you basically can 
+the avaiable space in half each time you open a new window, and then that window is considered its 
+own "space", because when you open *another* window while that one is focused, they both become
+children of some parent (in not graph theory speak, the space of the original window is split in 
+half again).
+
+[^3]: Apple has some encryption shenanigans that makes some hardware not accessible if a proper OSX
+bootup hasn't occurred, so installing Linux on a modern MacBook is inherently incomplete. Could always
+use a VM though. 
+
+[^4]: If I've peaked your interest with this, check out ``ani-cli``! It scrapes gogoanime.tv and pipes
+the stream output to `mpv`, which is a very good video player. No ads, no clicking with the mouse, 
+just open a terminal and go!

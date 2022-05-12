@@ -66,10 +66,10 @@ const BlogIndex = ({ allPostsData }) => {
 				</div>
 				{ active && results.length > 0 && (
 					<ul>
-						{results.map(({ slug, date, title, exerpt }) => (
+						{results.map(({ slug, date, title, excerpt }) => (
 							<li key={slug}>
 								<Link href='/blog/[slug]' as={`/blog/${slug}`}>
-							<a><BlogPost title={title} date={date} excerpt={exerpt} /></a>
+							<a><BlogPost title={title} date={date} excerpt={excerpt} /></a>
 								</Link>
 							</li>
 						))}
@@ -78,7 +78,7 @@ const BlogIndex = ({ allPostsData }) => {
 
 				{query === '' && (
 					<ul>
-						{allPostsData.map(({slug, date, title, exerpt}) => (
+						{allPostsData.map(({slug, date, title, excerpt}) => (
 							<li
 								key={slug}
 								>
@@ -86,7 +86,7 @@ const BlogIndex = ({ allPostsData }) => {
 										href='/blog/[slug]'
 										as={`/blog/${slug}`}
 										>
-										<a><BlogPost title={title} date={date} excerpt={exerpt} /></a>
+										<a><BlogPost title={title} date={date} excerpt={excerpt} /></a>
 									</Link>
 								</li>
 							))}

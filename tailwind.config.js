@@ -25,6 +25,12 @@ module.exports = {
             },
             h3: {
               color: theme('colors.accent.500'),
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
             }
           },
         },

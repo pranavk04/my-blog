@@ -44,13 +44,13 @@ export default function Posts({ source, frontMatter }) {
 
 				<Link href='/blog'>
 					<div className="flex flex-row items-center"> 
-						<IoIosArrowBack className="text-accent-900 text-xl"/>
-						<a className="text-accent-900 font-semibold text-xl ">Back</a>
+						<IoIosArrowBack className="text-primary-900 text-xl"/>
+						<a className="text-primary-900 font-semibold text-xl ">Back</a>
 					</div>
 				</Link>
 
 				<div className="text-center">
-					<h1 className="text-primary-900 text-3xl md:text-5xl md:mb-2 font-bold">{frontMatter.title}</h1>
+					<h1 className="text-accent-900 text-3xl md:mb-2 font-bold">{frontMatter.title}</h1>
 					<span className="text-gray-600 text-lg">{frontMatter.date}</span>
 				</div>
 
@@ -59,7 +59,6 @@ export default function Posts({ source, frontMatter }) {
 				<div className="flex">
 					<article className="mt-8 mx-auto prose">
 						<MDXRemote {...source} />
-						<Reactive />
 					</article>
 				</div>
 

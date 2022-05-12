@@ -26,7 +26,6 @@ export default function Tech({ source, frontMatter }) {
                     <h1 className='text-primary-900 text-3xl md:text-5xl md:mb-2 font-bold'>
                         {frontMatter.title}
                     </h1>
-                    <span className='text-gray-600 text-lg'>{frontMatter.date}</span>
                 </div>
 
                 <hr className='my-8 border-t-2 w-20 mx-auto' />

@@ -19,7 +19,7 @@ const BlogIndex = ({ allTechData }) => {
 
 			
                 <ul>
-                    {allTechData.map(({slug, date, title, exerpt}) => (
+                    {allTechData.map(({slug, title, excerpt}) => (
                         <li
                             key={slug}
                             >
@@ -27,7 +27,7 @@ const BlogIndex = ({ allTechData }) => {
                                     href='/tech/[slug]'
                                     as={`/tech/${slug}`}
                                     >
-                                    <a><BlogPost title={title} date={date} excerpt={exerpt} /></a>
+                                    <a><BlogPost title={title} excerpt={excerpt} /></a>
                                 </Link>
                             </li>
                         ))}

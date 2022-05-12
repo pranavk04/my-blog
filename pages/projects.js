@@ -53,9 +53,7 @@ export default function Projects() {
 						This is the code for a game I wrote back in middle school, tag. It was originally written in Javascript on Khan Academy (where I learned how to program games), but I ported to C++ during 9th grade as a way to learn the language. It's written in SFML. 
 					</PLink>
 				</li>
-
-				<li>
-				</li>
+	
 			</ul>
 
 		</div>
