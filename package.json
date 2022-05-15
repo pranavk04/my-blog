@@ -36,7 +36,7 @@
     "next": "^11.1.0",
     "next-mdx-remote": "^3.0.4",
     "postcss": "^8.3.6",
-    "prism-themes": "^1.8.0",
+    "prism-themes": "^1.9.0",
     "prop-types": "^15.7.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
