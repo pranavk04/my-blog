@@ -12,12 +12,12 @@ export default function layout({ children }) {
 						<SideNav />
 					</div>
 					<div className='sm:col-span-2 md:col-span-3'>
-						<div className='p-10 rounded-xl border space-y-10'>
+						<div className='pt-10 pb-5 px-10 rounded-xl border space-y-10'>
 							<main>{children}</main>
+							<Footer />
 						</div>
 					</div>
 				</div>
-				{/* <Footer /> */}
 			</div>
 		</div>
 	)

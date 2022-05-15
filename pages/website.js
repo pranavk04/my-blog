@@ -9,6 +9,8 @@ export default function Website() {
 			<h2 className="md:text-2xl text-xl text-accent-900 font-semibold">May 2022</h2>
 			<ul className=" m-4 list-disc">
 				<li>Redid my About Me, and the Recommendations page.</li>
+				<li>Added the Nature page for my photos.</li>
+				<li>Added a footer with a link to the source repository.</li>
 			</ul>
 
 			<h2 className="md:text-2xl text-xl text-accent-900 font-semibold">January 2022</h2>

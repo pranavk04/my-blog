@@ -6,7 +6,7 @@ function Home() {
 
 			<p>This is my site and blog. The navigator on the side can be used to access every major page on this site. You'll find my writing, projects, reviews, and recommendations. </p>
 			<p>The website page is a development log, and the tech page contains my setups for various programs or development. </p>
-			<p>If you have a need to contact me, feel free to use the form in the contact page. You could also try reaching me on Discord, through the icon provided above.</p>
+			<p>If you have a need to contact me, feel free to use the form linked below. You could also try reaching me on Discord, through the icon provided above.</p>
 		</div>
 	);
 }

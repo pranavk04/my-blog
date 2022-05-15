@@ -3,7 +3,7 @@ import {
     CgWebsite
 } from 'react-icons/cg'
 import {
-    FaHammer, FaHome, FaInfo, FaPenSquare, FaStar, FaUser, FaExternalLinkAlt, FaFileAlt, FaMusic, FaPalette, FaLaptopCode, FaBook
+    FaHammer, FaHome, FaInfo, FaPenSquare, FaStar, FaUser, FaExternalLinkAlt, FaFileAlt, FaMusic, FaPalette, FaLaptopCode, FaBook, FaLeaf
 } from 'react-icons/fa'
 import {
     MdContactMail
@@ -34,10 +34,8 @@ export default function SideNav(props) {
             <RowEl link='/blog' icon={<FaPenSquare />} text='Blog' />
             <RowEl link='/about-me' icon={<FaUser />} text='About Me' />
             <RowEl link='/projects' icon={<FaHammer />} text='Projects' />
-            <RowEl link='/contact' icon={<MdContactMail />} text='Contact' />
+            <RowEl link='/nature' icon={<FaLeaf/>} text='Nature' />
             <RowEl link='/resources' icon={<FaInfo />} text='Resources' />
-            {/* <RowEl link='/music' icon={<FaMusic />} text='Music' /> */}
-            {/* <RowEl link='/art' icon={<FaPalette />} text='Art' /> */}
             <RowEl link='/ratings' icon={<FaStar />} text='Ratings' />
             <RowEl link='/website' icon={<CgWebsite />} text='Website' />
             <RowEl link='/tech' icon={<FaLaptopCode />} text='Tech' />

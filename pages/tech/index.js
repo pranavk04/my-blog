@@ -14,7 +14,7 @@ const BlogIndex = ({ allTechData }) => {
 	
 		<div>
 			<p> 
-				Here you'll find descriptions of my configurations for development, guides on things I think are important or cool, and discussions of the latest technological developments. 
+				Here you'll find descriptions of my configurations, whether those be in general or for specific programs.  
 			</p>
 
 			

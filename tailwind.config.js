@@ -6,7 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'sans': ['"Avenir"'], 
+      'sans': ['Avenir', 'Helvetica'], 
     }, 
     extend: {
       typography: (theme) => ({
@@ -40,9 +40,9 @@ module.exports = {
       // accent: colors.fuchsia,
       primary: colors.sky, // 800 weight is what we want
       accent: colors.rose,  // 100 weight is what we want 
-      secondary: '#fdf6e3',
-      // secondary: colors.emerald, 
-      // highlight: colors.purple,
+      // secondary: '#fdf6e3',
+      secondary: colors.emerald, 
+      highlight: colors.purple,
       gray: colors.trueGray,
     }, 
     },
