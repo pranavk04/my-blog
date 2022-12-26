@@ -23,7 +23,7 @@
     "@iconify/react": "^3.0.1",
     "@maggieliu/reactive": "^1.2.10",
     "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^11.1.0",
+    "@next/mdx": "^13.1.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.4",
