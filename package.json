@@ -33,6 +33,6 @@
 		"mdsvex": "^0.10.6",
 		"rehype-katex": "^6.0.2",
 		"rehype-prism": "^2.2.2",
-		"remark-parse": "^10.0.1"
+		"remark-parse": "^10.0.2"
 	}
 }
