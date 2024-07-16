@@ -7,8 +7,8 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-      'heading': ['"Alegreya Sans"'],
-      'body': ['Alegreya']
+      'heading': ['"Alegreya"'],
+      'body': ['"Alegreya"']
     }, 
     extend: {
       typography: (theme) => ({

@@ -2,7 +2,6 @@
 
 	<p> 
 	Welcome to my site and blog. You can find out about myself, my writing, and my projects by using the links above.
-	The recs (recommendations) page has resources on what I think are the best places to learn things
-	or the best tools to use for certain tasks. To return to this page, click my name at the top on any page. 
+	To return to this page, click my name at the top on any page. 
 	If you'd like to contact me, you can use the link in the footer. 
 	</p>

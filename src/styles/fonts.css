@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Tiro Telugu';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''), url('/fonts/TiroTelugu-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Shobhika';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''), url('/fonts/Shobhika-Regular.otf') format('opentype');
+}

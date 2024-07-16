@@ -5,6 +5,14 @@
     <p>This website is written with a combination of Svelte and TailwindCSS. It uses MDSveX to render Markdown into blog posts, but no other packages, for very few dependencies.</p>
 
     <div class="space-y-1">
+        <h2 class="md:text-2xl text-xl font-heading text-primary-900 font-semibold">February 2024</h2>
+        <ul class="m-4 list-disc">
+            <li>Updating some now outdated content, and adding some new projects I've done in the
+meantime. 
+            </li>
+        </ul>
+    </div>
+    <div class="space-y-1">
         <h2 class="md:text-2xl text-xl font-heading text-primary-900 font-semibold">July 2023</h2>
         <ul class="m-4 list-disc">
             <li>Completely revamped the internals, switching to Svelte, as the 
