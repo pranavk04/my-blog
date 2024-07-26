@@ -2,8 +2,9 @@
 <div class='space-y-4'>
 	We describe the romanization scheme used on this site for clarity, although I hope it is intuitive
 at first glance. On the back-end, I use a modified version of the Harvard-Kyoto romanization scheme to include additional Dravidian phonemes. 
+The font used on this website is EB Garamond, a serif font that I find very aesthetically pleasing.
 
-	<table class='mx-auto table-auto border-separate border-spacing-2 border border-slate-500' style='font-family: Alegreya'>
+	<table class='mx-auto table-auto border-separate border-spacing-2 border border-slate-500' style='font-family: Garamond'>
 		<tr>
 			<td> a </td>
 			<td> ā </td>
@@ -16,23 +17,17 @@ at first glance. On the back-end, I use a modified version of the Harvard-Kyoto 
 			<td> r̥ </td>
 			<td> r̥̄ </td>
 			<td> l̥ </td>
-			<td> l̥̄ </td>
-		</tr>
-		<tr>
 			<td> ĕ </td>
 			<td> e </td>
 			<td> ai </td>
+		</tr>
+		<tr>
 			<td> ŏ </td>
 			<td> o </td>
 			<td> au </td>
-		</tr>
-		<tr>
-		<td> aṁ </td>
-		<td> am̐ </td>
-		<td> amꣲ</td>
-		<td> aḥ </td>
-		<td> aḫ </td>
-		<td> aẖ </td>
+			<td> aṁ </td>
+			<td> am̐ </td>
+			<td> aḥ </td>
 		</tr>
 	<tr>
 	<td> k </td>

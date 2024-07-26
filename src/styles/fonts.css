@@ -11,3 +11,30 @@
     font-weight: 500;
     src: local(''), url('/fonts/Shobhika-Regular.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gentius';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''), url('/fonts/GentiumPlus-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Brill';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''), url('/fonts/Brill-Roman.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('/fonts/Spectral-Light-Web.ttf') format('truetype');
+}

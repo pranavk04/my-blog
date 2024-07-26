@@ -1,4 +1,4 @@
-<div class="">
+<div style="font-family: Garamond" class="">
 	<div class="flex items-center justify-between flex-wrap p-5">
 		<div class="flex items-center flex-shrink-0">
 			<a href='/'>

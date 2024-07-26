@@ -2,7 +2,7 @@
 <div class="space-y-4">
 	<h1 class="font-heading font-black mb-4 text-center text-3xl md:text-5xl"> About Me</h1>
 
-	<p class="text-center">Hi there, I'm Pranav! I'm currently an undergraduate at Columbia University.</p>
+	<p class="text-center">Hi there, I'm Pranav! I'm currently a third-year undergraduate at Columbia University.</p>
 
 	<p>
 	If I were to provide just the essence of my interests, I am (very
@@ -21,9 +21,9 @@ algebraic structures and their natural realizations in topological and geometric
 			linguistics, with an aim towards the interaction of culture and language.</li>
 		<li><a class="underline text-primary-500" href="/about/language-and-religion">Eastern languages and religion:</a> the study of 
 		classical Sanskrit and Tĕlugu literature, Veda (and ritualism), Vedāṅga, Sūtra, and Śāstra corpora. I am also interested in the study of classical Chinese and Japanese, the development of Buddhism, and the exchange of philosophy between India and East Asia.</li>
-		<li><a class="underline text-primary-500" href="/about/carnatic">Carnatic music:</a> I have been studying the Carnatic flute (veṇu) since I was a child.</li>	
+		<li><a class="underline text-primary-500" href="/about/carnatic">Carnatic music:</a> I have been studying the Carnatic flute (veṇu) since I was a child, and have begun a humble journey as a composer.</li>	
 		<li><a class="underline text-primary-500" href="/about/computing">Computing:</a> computational complexity, convex optimization, and quantum computing (along with an obligatory mention of machine learning).</li>
-		<li><a class="underline text-primary-500" href="/about/shakuhachi">Shakuhachi:</a> I also play the shakuhachi, the end-blown Japanese flute originating from the suizen practices of komusō monks.</li>
+		<li><a class="underline text-primary-500" href="/about/shakuhachi">Shakuhachi:</a> I have been studying the shakuhachi, an end-blown Japanese flute originating from the suizen practices of komusō monks, in the kinkō-ryū style since freshman year of college.</li>
 	</ul>
 
 	I also enjoy Gong Fu tea, story-driven games, Pokémon, hardware, stationery (fountain pens and paper), the starry night sky, and making new friends!

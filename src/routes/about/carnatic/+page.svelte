@@ -1,6 +1,6 @@
 
 <div class="space-y-4">
-	<h1 class="font-heading font-black mb-4 text-center text-3xl md:text-5xl">Karṇāṭaka Saṅgītam</h1>
+	<h1 class="font-heading font-black mb-4 text-center text-3xl md:text-5xl">Carnatic Music</h1>
 
 	<p class="text-center" style="font-family: Tiro Telugu">నాదలోలుఁడై బ్రహ్మానందమందవే మనసా</p>
     <p>
@@ -35,6 +35,9 @@
         <li><a class="text-primary-500" href="/about/carnatic/">satataṁ ahaṁ smarāmi tava nāmaṁ</a>: rāga pantuvarāḷi.</li>
         <li><a class="text-primary-500" href="/about/carnatic/">ambā suta pāhimāṁ gajānanaikadantaṁ</a>: rāga śūlini.</li>
         <li><a class="text-primary-500" href="/about/carnatic/">ĕnduku nī momu dācukunnāvurā</a>: rāga kāṁbhoji.</li>
+        <li><a class="text-primary-500" href="/about/carnatic/">phalitamu galadā mī yājñapti vinā</a>: rāga bhairavi.</li>
+        <li><a class="text-primary-500" href="/about/carnatic/">śrī subrahmaṇyāya namāmi</a>: rāga ṣaṇmukhapriya.</li>
+
     </ol>
 	  
 
