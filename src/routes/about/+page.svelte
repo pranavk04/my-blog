@@ -2,26 +2,29 @@
 <div class="space-y-4">
 	<h1 class="font-heading font-black mb-4 text-center text-3xl md:text-5xl"> About Me</h1>
 
-	<p class="text-center">Hi there, I'm Pranav! I'm currently an undergraduate at Columbia University.</p>
+	<p class="text-gray-700 text-center">Hi there, I'm Pranav! I'm currently a third-year undergraduate at Columbia University.</p>
 
 	<p>
-		I'm very interested in math, machine learning, protein folding, and linguistics. I also enjoy programming that makes my life easier. 
+	As the great mathematician Hermann Weyl once said, "Besides language and music, mathematics is one of the primary manifestations of the free creative power of the human mind," and these happen to be my main passions. I enjoy breaking down and trying to understand complex structures,
+	which is the unifying concept behind my seemingly scattered fields of interest.
 	</p>
 
-	<p>In no particular order, here are some other things about me:</p>
+	<p>
+	In particular, I am deeply intruigued by the following, and would love to chat about them: 
+	</p>
 	<ul class='list-disc space-y-2 m-4 ml-8'>
-		<li>I love music: I've studied both South Indian and Western classical music extensively.
-			<ul class='list-decimal space-y-1 ml-8'>
-				<li>I play the Carnatic flute, and I've begun to learn a little veena.</li>
-				<li>I've studied piano, and can play a little metal guitar.</li>
-				<li>I also play the shakuhachi, a Japanese classical instrument.</li>
-			</ul>	
-		</li>
-		<li>I like gardening, and by extension nature photography.</li>
-		<li>My favorite kinds of video games are RPGs and adventure games.</li>
-		<li>One hobby of mine is to collect over-engineered stationery. </li>
-		<li>I'm an avid language learner. I've started studying my fifth one, Sanskrit.</li>
+		<li><b>Mathematics</b>:
+algebraic structures and their natural realizations in topology and geometry.</li>
+		<li><b>Linguistics</b>: comparative analyses and historical 
+			linguistics, with an aim towards the interaction of culture and language. In particular, I enjoy studying the Dravidian, Indo-Iranian, Japonic, and Sino-Tibetan language families.</li>
+		<li><b>Eastern languages and religion</b>: the study of 
+		classical Sanskrit and Tĕlugu literature, Veda (and ritualism), Vedāṅga, sūtra, and Śāstra corpora, Vedāṅga, and Mīmāṁsa. I am also interested in the study of classical Chinese and Japanese, the development of Buddhism, and the exchange of philosophy between India and East Asia.</li>
+		<li><b>Carnatic music</b>: I have been studying the Carnatic flute (veṇu) since I was twelve, and have begun a humble journey as a vaiṇika and composer.</li>	
+		<li><b>Computing</b>: computational complexity, and quantum computing (along with an obligatory mention of machine learning). Also anything combinatorial in nature.</li>
+		<li><b>Shakuhachi</b>: I have been studying the shakuhachi, an end-blown Japanese flute originating from the suizen practices of komusō monks, in the kinkō-ryū style since freshman year of college.</li>
 	</ul>
+
+	I also enjoy Gong Fu tea, story-driven games, Pokémon, hardware, stationery (fountain pens and paper), the starry night sky, and making new friends!
 </div>
 
 

@@ -7,8 +7,8 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-      'heading': ['"Alegreya Sans"'],
-      'body': ['Alegreya']
+      'heading': ['"UnifrakturMaguntia"'],
+      'body': ['"Garamond"']
     }, 
     extend: {
       typography: (theme) => ({
@@ -35,6 +35,9 @@ export default {
             },
             'code::after': {
               content: '""',
+            },
+            p: {
+              fontWeight: '500',
             }
           },
         },
