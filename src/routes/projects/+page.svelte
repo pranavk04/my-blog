@@ -16,7 +16,7 @@ projects below to view technical documents or source code when applicable.
 			</ProjectLink>
 	</li>
 	<li>
-		<ProjectLink src="/" title="Khovanov Homology and Quantum Error Correction">
+		<ProjectLink src="/projects" title="Khovanov Homology and Quantum Error Correction">
 			This project was done through the Columbia mathematics REU, under Professor Rostislav Akhmechet, 
 			and supported by both the math department and the I. I. Rabi Scholars program at Columbia. Khovanov 
 			Homology is a powerful invariant in knot theory that categorifies the Jones polynomial of a link diagram, and 
@@ -24,7 +24,7 @@ projects below to view technical documents or source code when applicable.
 		</ProjectLink>
 	</li>
 		<li>
-			<ProjectLink src="lubin-tate.pdf" title="Lubin Tate Theory and the Local Kronecker-Weber
+			<ProjectLink src="/lubin-tate.pdf" title="Lubin Tate Theory and the Local Kronecker-Weber
 Theorem">
 	This is an expository paper I wrote on Lubin-Tate formal groups, which provide an elementary way
 to prove the theorems known as "local class field theory," which are usually proven by using
@@ -32,14 +32,14 @@ cohomological methods.
 			</ProjectLink>
 		</li>
 		<li>
-	<ProjectLink src="knot.pdf" title="Grid Diagrams of Knots">
+	<ProjectLink src="/knot.pdf" title="Grid Diagrams of Knots">
 		This is a short expository paper I wrote on the grid diagrams of topological knots, and a simple
 	way to compute the Wirtinger presentation (a presentation of the fundamental group of the knot
 		complement, which is a very strong invariant). 
 	</ProjectLink>
 	</li>
 		<li>
-			<ProjectLink src="abstract.pdf" title='NASA SPEARS 3D Microscope'>	
+			<ProjectLink src="/abstract.pdf" title='NASA SPEARS 3D Microscope'>	
 				This is the abstract for the research I counducted through my internship at NASA Ames. I created a machine-learning based data quality 
 				evaluator and am working on segmenting the data into distinct regions. I also reimplemented prototyped MATLAB 3D 
 				reconstruction algorithms into performant C++ code for use on embedded hardware. You can read more about the SPEARS 3D microscope project
@@ -51,7 +51,7 @@ class="text-primary-600 visited:text-primary-400 hover:text-primary-400">
 			</ProjectLink>
 	</li>
 		<li>
-		<ProjectLink src="diffusion-models.pdf" title="Deep Learning & Protein Allostery">
+		<ProjectLink src="/diffusion-models.pdf" title="Deep Learning & Protein Allostery">
 				I did some research at the Glasgow Lab at the Columbia University Medical Center during
 my freshman year on diffusion models in deep learning for protein allostery. This was funded by the
 I.I Rabi Scholars Program at Columbia. Attached is my poster that I presented at the Undergraduate
@@ -83,7 +83,7 @@ the RSK correspondence and its applications.
 			</ProjectLink>
 		</li>
 		<li>
-			<ProjectLink src='poset.pdf' title="Partially Ordered Sets (Posets)">
+			<ProjectLink src='/poset.pdf' title="Partially Ordered Sets (Posets)">
 			These are the slides from a talk I gave to high school students on introducing partially
 ordered sets and associated combinatorial problems with them, including graded posets.
 	</ProjectLink>
