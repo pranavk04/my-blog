@@ -7,7 +7,7 @@
     <div class="space-y-1">
         <h2 class="md:text-2xl text-xl font-heading text-primary-900 font-semibold">July 2024</h2>
         <ul class="m-4 list-disc">
-            <li> Font and UI changes. More unnecessary pages have been removed, a better font (EB Garamond) was chosen to accurately represent all characters. Heading font was updated to a Fraktur script because I find it very appealing from ring theory. 
+            <li> Font and UI changes. More unnecessary pages have been removed, a better font (EB Garamond) was chosen to accurately represent all characters. Heading font was updated to a Fraktur script because I find it very appealing from math documents. 
             </li>
             <li>Updated the About page to better reflect my current interests and pursuits. Also updated the projects page, to add my work done since it was last updated.</li>
         </ul>
