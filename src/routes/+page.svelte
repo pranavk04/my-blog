@@ -1,4 +1,4 @@
-<h1 class="font-heading text-5xl text-center font-black">Hi! I'm Pranav!</h1>
+<h1 class="font-heading text-3xl md:text-5xl text-center font-black">Hi! I'm Pranav!</h1>
 
 	<p> 
 	Welcome to my site. You can find out about myself, 
