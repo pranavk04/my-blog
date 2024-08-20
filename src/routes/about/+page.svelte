@@ -18,7 +18,7 @@ algebraic structures and their natural realizations in topology and geometry.</l
 		<li><b>Linguistics</b>: comparative analyses and historical 
 			linguistics, with an aim towards the interaction of culture and language. In particular, I enjoy studying the Dravidian, Indo-Iranian, Japonic, and Sino-Tibetan language families.</li>
 		<li><b>Eastern languages and religion</b>: the study of 
-		classical Sanskrit and Tĕlugu literature, Veda (and ritualism), Vedāṅga, sūtra, and Śāstra corpora, Vedāṅga, and Mīmāṁsa. I am also interested in the study of classical Chinese and Japanese, the development of Buddhism, and the exchange of philosophy between India and East Asia.</li>
+		classical Sanskrit and Tĕlugu literature, Veda (and ritualism), Vedāṅga, sūtra, and Śāstra corpora, Vedānta, and Mīmāṁsa. I am also interested in the study of classical Chinese and Japanese, the development of Buddhism, and the exchange of philosophy between India and East Asia.</li>
 		<li><b>Carnatic music</b>: I have been studying the Carnatic flute (veṇu) since I was twelve, and have begun a humble journey as a vaiṇika and composer.</li>	
 		<li><b>Computing</b>: computational complexity, and quantum computing (along with an obligatory mention of machine learning). Also anything combinatorial in nature.</li>
 		<li><b>Shakuhachi</b>: I have been studying the shakuhachi, an end-blown Japanese flute originating from the suizen practices of komusō monks, in the kinkō-ryū style since freshman year of college.</li>
