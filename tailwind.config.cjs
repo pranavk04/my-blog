@@ -7,7 +7,7 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-      'heading': ['"UnifrakturMaguntia"'],
+      'heading': ['"Garamond"'],
       'body': ['"Garamond"']
     }, 
     extend: {
