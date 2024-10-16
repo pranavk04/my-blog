@@ -16,11 +16,11 @@ projects below to view technical documents or source code when applicable.
 			</ProjectLink>
 	</li>
 	<li>
-		<ProjectLink src="/projects" title="Khovanov Homology and Quantum Error Correction">
+		<ProjectLink src="https://arxiv.org/abs/2410.11252" title="Khovanov Homology and Quantum Error Correction">
 			This project was done through the Columbia mathematics REU, under Professor Rostislav Akhmechet, 
 			and supported by both the math department and the I. I. Rabi Scholars program at Columbia. Khovanov 
 			Homology is a powerful invariant in knot theory that categorifies the Jones polynomial of a link diagram, and 
-			we used it to investigate families of homological CSS codes arising from quantum error theory.	
+			we used it to investigate families of homological CSS codes arising from quantum error theory. 
 		</ProjectLink>
 	</li>
 		<li>
