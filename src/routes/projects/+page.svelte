@@ -6,14 +6,16 @@
 	<h1 class="md:text-5xl font-heading text-3xl font-black text-center">Projects</h1>
 	<p class="text-gray-700 text-center">These are my projects, both research and personal.</p>
 
-	<p>The work I've done below is a mix of mathematics and programming. You can click the names of the
-projects below to view technical documents or source code when applicable. 
-	</p>
 	<ul class='list-disc space-y-2 m-4'>
 		<li>
 			<ProjectLink src="/dev-log" title="This site">
 				Click here for a development log of this website and to see what sorts of changes have happened over time.
 			</ProjectLink>
+	</li>
+	<li>
+		<ProjectLink src="/compositions" title="Carnatic compositions">
+			An index of all of the kr̥ti-s (the main Carnatic compositional form since the 18th century) that I've composed, with audio to come soon!
+		</ProjectLink>
 	</li>
 	<li>
 		<ProjectLink src="https://arxiv.org/abs/2410.11252" title="Khovanov Homology and Quantum Error Correction">
