@@ -107,7 +107,7 @@
                     <a href="compositions/hiranyarathavahana" class="text-primary-600">hiraṇyarathavāhana</a>
                 </th>
                 <td class="px-6 py-4">
-                    sāveri 
+                    śaṅkarābharaṇa 
                 </td>
                 <td class="px-6 py-4">
                     ādi 
@@ -146,7 +146,7 @@
             </tr>
             <tr class="">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900">
-                    <a href="compositions/nadopasanamu-jesevarulaku" class="text-primary-600">nādopāsanamu jesevārulaku</a>  
+                    <a href="compositions/nadopasanamu-jesevarula" class="text-primary-600">nādopāsanamu jesevārula</a>  
                 </th>
                 <td class="px-6 py-4">
                     bilahari  
@@ -196,6 +196,49 @@
                 </td>
                 <td class="px-6 py-4">
                     miśra cāpu
+                </td>
+                <td class="px-6 py-4">
+                    tĕlugu
+                </td>
+            </tr>
+            <tr class="">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900">
+                    <a href="compositions/hamsagamani" class="text-primary-600">haṁsagamanī</a>
+                </th>
+                <td class="px-6 py-4">
+                    ānandabhairavi  
+                </td>
+                <td class="px-6 py-4">
+                    ādi
+                </td>
+                <td class="px-6 py-4">
+                    saṁskr̥ta
+                </td>
+            </tr>
+
+            <tr class="">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900">
+                    <a href="compositions/samaganapriya" class="text-primary-600">sāmagānapriyamahādevam</a>
+                </th>
+                <td class="px-6 py-4">
+                    kharaharapriya  
+                </td>
+                <td class="px-6 py-4">
+                    rūpaka
+                </td>
+                <td class="px-6 py-4">
+                    saṁskr̥ta
+                </td>
+            </tr>
+            <tr class="">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900">
+                    <a href="compositions/ambujasana" class="text-primary-600">ambujāsana kamalāsita</a>
+                </th>
+                <td class="px-6 py-4">
+                    mohanakaḷyāṇi  
+                </td>
+                <td class="px-6 py-4">
+                    ādi
                 </td>
                 <td class="px-6 py-4">
                     tĕlugu

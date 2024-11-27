@@ -1,7 +1,7 @@
 
 
 <div class='space-y-4'>
-	<h1 class="md:text-5xl font-shobhika text-3xl font-black text-center">Ĕnni janmamulaku</h1>
+	<h1 class="md:text-3xl font-shobhika text-3xl font-black text-center">Ĕnni janmamulaku</h1>
 	<p class="text-gray-700 text-center"> rāga: toḍi, tāḷa: miśra cāpu.</p>
 
     <div class="text-center" style="font-family: Tiro Telugu">
