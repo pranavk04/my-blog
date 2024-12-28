@@ -1,6 +1,6 @@
 <div class='space-y-4'>
 	<h1 class="md:text-5xl font-heading text-3xl font-black text-center">Compositions</h1>
-	<p class="text-gray-700 text-center">My Carnatic compositions, all of which are in the kr̥ti form.</p>
+	<p class="md:text-sm text-xs text-gray-700 text-center">My Carnatic compositions, all of which are in the kr̥ti form.</p>
 </div>
 
 <p>
