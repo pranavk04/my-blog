@@ -1,6 +1,6 @@
 <div class='space-y-4'>
 	<h1 class="md:text-3xl font-shobhika text-3xl font-black text-center">Vighnarājaṁ staumyaham</h1>
-	<p class="text-gray-700 text-center"> rāga: dhanyāsi, tāḷa: ādi.</p>
+	<p class="text-gray-700 text-center"> rāga: asāveri, tāḷa: ādi.</p>
 
     <div class="text-center" style="font-family: Shobhika">
         <h3>पल्लवि</h3>
