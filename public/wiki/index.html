@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Math Wiki</title>
+<link rel="stylesheet" href="styles.css"/>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+#toolbar { display:flex; gap:12px; align-items:center; margin-bottom:12px; }
+#search { flex:1; padding:8px 10px; border:1px solid #ccc; border-radius:8px; }
+#tree { margin-top:8px; }
+.tree-dir > .tree-row { cursor:pointer; }
+.tree-row { display:flex; align-items:center; gap:6px; padding:2px 0; }
+.tree-children { margin-left:18px; display:none; }
+.tree-dir.open > .tree-children { display:block; }
+.tree-toggle { user-select:none; font-family:monospace; width:18px; display:inline-block; text-align:center; }
+.tree-name a { text-decoration:none; }
+.small-muted { color:#666; font-size:0.9em; }
+.result-item { padding:6px 8px; border-radius:6px; border:1px solid #eee; margin:6px 0; }
+</style>
+</head>
+<body>
+<h1>Math Wiki</h1>
+<div id="toolbar">
+  <input id="search" type="search" placeholder="Search pages…"/>
+  <button id="clearBtn" type="button">Clear</button>
+</div>
+<div id="results" aria-live="polite"></div>
+<div id="tree"></div>
+
+<script id="wiki-tree" type="application/json">{"name": "Home", "type": "dir", "path": "index.html", "children": [{"name": "abelian_varieties", "type": "dir", "path": "abelian_varieties/index.html", "children": [{"name": "[1.1] Abelian varieties", "type": "file", "path": "abelian_varieties/test.html"}]}, {"name": "arakelov_theory", "type": "dir", "path": "arakelov_theory/index.html", "children": [{"name": "[2.1] Metrized line bundles", "type": "file", "path": "arakelov_theory/metrized_line_bundles.html"}]}, {"name": "automorphic_forms", "type": "dir", "path": "automorphic_forms/index.html", "children": [{"name": "hilbert_modular_forms", "type": "dir", "path": "automorphic_forms/hilbert_modular_forms/index.html", "children": [{"name": "[3.1.1] Teichmuller curves", "type": "file", "path": "automorphic_forms/hilbert_modular_forms/teichmuller_curves.html"}]}, {"name": "[3.2] line_bundles", "type": "file", "path": "automorphic_forms/line_bundles.html"}]}, {"name": "category_theory", "type": "dir", "path": "category_theory/index.html", "children": [{"name": "infinity_categories", "type": "dir", "path": "category_theory/infinity_categories/index.html", "children": [{"name": "[4.1.1] test", "type": "file", "path": "category_theory/infinity_categories/test.html"}]}]}, {"name": "manifolds", "type": "dir", "path": "manifolds/index.html", "children": [{"name": "[5.1] Manifolds", "type": "file", "path": "manifolds/1-manifolds.html"}, {"name": "[5.2] Tangent bundles", "type": "file", "path": "manifolds/2-tangent-bundle.html"}, {"name": "[5.3] Vector bundles", "type": "file", "path": "manifolds/3-vector-bundles.html"}, {"name": "[5.4] Lie derivatives", "type": "file", "path": "manifolds/4-lie-derivatives.html"}, {"name": "[5.5] Tensors", "type": "file", "path": "manifolds/5-tensors.html"}]}]}</script>
+<script>
+(function() {
+  const treeData = JSON.parse(document.getElementById('wiki-tree').textContent);
+  const treeEl = document.getElementById('tree');
+  const resultsEl = document.getElementById('results');
+  const input = document.getElementById('search');
+  const clearBtn = document.getElementById('clearBtn');
+
+  function createNode(node) {
+    if (node.type === 'dir') {
+      const wrap = document.createElement('div');
+      wrap.className = 'tree-dir';
+      const row = document.createElement('div');
+      row.className = 'tree-row';
+
+      const toggle = document.createElement('span');
+      toggle.className = 'tree-toggle';
+      toggle.textContent = '▶';
+      row.appendChild(toggle);
+
+      const name = document.createElement('span');
+      name.className = 'tree-name';
+      const link = document.createElement('a');
+      link.href = node.path || '#';
+      link.innerHTML = node.name === 'Home' ? 'Home' : node.name + '/';
+      name.appendChild(link);
+      row.appendChild(name);
+
+      wrap.appendChild(row);
+
+      const kids = document.createElement('div');
+      kids.className = 'tree-children';
+      (node.children || []).forEach(ch => kids.appendChild(createNode(ch)));
+      wrap.appendChild(kids);
+
+      row.addEventListener('click', (ev) => {
+        if (ev.target.tagName.toLowerCase() === 'a') return;
+        const open = wrap.classList.toggle('open');
+        toggle.textContent = open ? '▼' : '▶';
+      });
+
+      if (node.name === 'Home') {
+        wrap.classList.add('open');
+        toggle.textContent = '▼';
+      }
+      return wrap;
+    } else {
+      const row = document.createElement('div');
+      row.className = 'tree-row';
+      const spacer = document.createElement('span');
+      spacer.className = 'tree-toggle';
+      spacer.textContent = '•';
+      row.appendChild(spacer);
+      const name = document.createElement('span');
+      name.className = 'tree-name';
+      const link = document.createElement('a');
+      link.href = node.path;
+      link.innerHTML = node.name; // may include TeX
+      name.appendChild(link);
+      row.appendChild(name);
+      return row;
+    }
+  }
+
+  function renderTree() {
+    treeEl.innerHTML = '';
+    treeEl.appendChild(createNode(treeData));
+    if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([treeEl]);
+  }
+
+  // simple substring search on titles
+  function search(q) {
+    const query = q.trim().toLowerCase();
+    if (!query) {
+      resultsEl.innerHTML = '';
+      treeEl.style.display = '';
+      return;
+    }
+    treeEl.style.display = 'none';
+    const results = [];
+
+    function walk(n) {
+      if (n.type === 'file') {
+        const name = n.name.replace(/<[^>]+>/g,'');
+        if (name.toLowerCase().includes(query)) results.push(n);
+      } else {
+        (n.children||[]).forEach(walk);
+      }
+    }
+    walk(treeData);
+
+    const frag = document.createDocumentFragment();
+    const hdr = document.createElement('div');
+    hdr.className = 'small-muted';
+    hdr.textContent = results.length + ' result' + (results.length===1?'':'s');
+    frag.appendChild(hdr);
+
+    results.forEach(n => {
+      const div = document.createElement('div');
+      div.className = 'result-item';
+      const a = document.createElement('a');
+      a.href = n.path;
+      a.innerHTML = n.name;
+      div.appendChild(a);
+      frag.appendChild(div);
+    });
+    resultsEl.innerHTML = '';
+    resultsEl.appendChild(frag);
+    if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([resultsEl]);
+  }
+
+  input.addEventListener('input', () => search(input.value));
+  clearBtn.addEventListener('click', () => {
+    input.value = ''; resultsEl.innerHTML = ''; treeEl.style.display = ''; input.focus();
+  });
+
+  renderTree();
+})();
+</script>
+</body>
+</html>

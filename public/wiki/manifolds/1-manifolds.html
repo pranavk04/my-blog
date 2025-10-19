@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Manifolds</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+<link href="../styles.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+</head>
+<body><nav class="breadcrumbs"><a href="../index.html">Home</a> / <a href="index.html">manifolds</a> / Manifolds</nav>
+<header id="title-block-header">
+<h1 class="title">Manifolds</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#atlases" id="toc-atlases">Atlases</a></li>
+<li><a href="#maps" id="toc-maps">Maps</a></li>
+<li><a href="#orientation" id="toc-orientation">Orientation</a></li>
+</ul>
+</nav>
+<h2 id="atlases">Atlases</h2>
+<div class="definition" id="blk:5.1.1.1"><span data-auto-label="1"><strong>Definition 5.1.1.1.</strong> </span>
+<p>An <em>atlas</em> of a topological <span class="math inline">\(n\)</span>-manifold <span class="math inline">\(M\)</span> is a collection <span class="math inline">\(\{(U_\alpha, \phi_\alpha): \alpha \in
+I\}\)</span> of charts such that <span class="math inline">\(U_\alpha\)</span> are an open cover of <span class="math inline">\(M\)</span>. The maps <span class="math inline">\(\phi_\beta \circ
+\phi_\alpha^{-1}\)</span> are the <em>transition functions</em>.</p>
+</div>
+<p>If the transition functions are smooth, we have a smooth atlas.
+Equivalent atlases are those such that their union is also a smooth
+atlas. A <em>smooth structure</em> on <span class="math inline">\(M\)</span> is a vchoice of equivalence class<a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a> of smooth atlases. This smooth
+structure makes <span class="math inline">\(M\)</span> a smooth
+manifold.</p>
+<h2 id="maps">Maps</h2>
+<p>A map <span class="math inline">\(f: M \to N\)</span> is smooth if
+for any <span class="math inline">\(p \in M\)</span>, there is a
+coordinate chart <span class="math inline">\((U, \phi)\)</span> around
+<span class="math inline">\(p\)</span> in some atlas representing the
+smooth structure on <span class="math inline">\(M\)</span> and a
+coordinate chart <span class="math inline">\((V, \psi)\)</span> around
+<span class="math inline">\(f(p)\)</span> in some atlas representing the
+smooth structure on <span class="math inline">\(N\)</span> such that
+<span class="math inline">\(f(U) \subset V\)</span> and <span class="math inline">\(g =
+\psi \circ f \circ \phi^{-1}: \phi(U) \to psi(V)\)</span> is smooth.
+This does not depend on the choice of coordinate charts in a fixed atlas
+for <span class="math inline">\(M\)</span> and <span class="math inline">\(N\)</span>.</p>
+<p><span class="math inline">\(f\)</span> is a <em>diffeomorphism</em>
+if it is a smooth homeomorphism with smooth inverse. If the restriction
+of any <span class="math inline">\(f\)</span> to <span class="math inline">\(U\)</span> is a diffeomorphism from <span class="math inline">\(U \to f(U)\)</span> then we say <span class="math inline">\(f\)</span> is a <em>local diffeomrphism</em>.</p>
+<p>We say <span class="math inline">\(f: U \to \mathbb R^n\)</span> is a
+<em>submersion</em> at <span class="math inline">\(x \in U\)</span>
+where <span class="math inline">\(U\)</span> is an open subset of <span class="math inline">\(\mathbb R^m\)</span> (and <span class="math inline">\(f\)</span> is smooth) if it has surjective
+differential <span class="math inline">\(df_x\)</span>. Similarly
+immersions have injective differentials.</p>
+<p>Now if <span class="math inline">\(f\)</span> is a map between
+manifolds instead, we do this in terms of the coordinate charts: there
+must exist charts around <span class="math inline">\(p\)</span> and
+<span class="math inline">\(f(p)\)</span> in <span class="math inline">\(M\)</span> and <span class="math inline">\(N\)</span> respectively such that <span class="math inline">\(f(U) \subset V\)</span> and <span class="math inline">\(g = \psi \circ f \circ phi^{-1}\)</span> is a
+submersion at <span class="math inline">\(\phi(p)\)</span>, for
+example.</p>
+<p>If <span class="math inline">\(f\)</span> is a submersion and an
+immersion at <span class="math inline">\(p \in M\)</span>, then <span class="math inline">\(f\)</span> is a local diffeomorphism at <span class="math inline">\(p\)</span>. We can also always pick a chart such
+that <span class="math inline">\(\phi(p) = 0\)</span>, and <span class="math inline">\(\psi(f(p)) = 0\)</span> such that <span class="math inline">\(psi\circ f
+\circ phi^{-1}\)</span> is the canonical submersion (or immersion)
+(these correspond to the usual coordinate projection and inclusions with
+extra zeroes).</p>
+<p>If <span class="math inline">\(f\)</span> is an immersion and <span class="math inline">\(f: M \to f(M)\)</span> is a homeomorphism, then we
+say <span class="math inline">\(f\)</span> is an embedding.</p>
+<p>Let <span class="math inline">\(M\)</span> be a subset of <span class="math inline">\(N\)</span>. Then <span class="math inline">\(M\)</span> is a submanifold of <span class="math inline">\(N\)</span> of dimension <span class="math inline">\(m leq n\)</span> if for each <span class="math inline">\(p
+\in M\)</span>, there is a chart <span class="math inline">\((U,
+\phi)\)</span> for <span class="math inline">\(N\)</span> around <span class="math inline">\(P\)</span> such that <span class="math inline">\(\phi(p) = 0\)</span>, and <span class="math inline">\(\phi(U \cap M)
+= \phi(U) \cap (\mathbb R^m \times \{0\})\)</span>.</p>
+<p>A point <span class="math inline">\(p \in M\)</span> is a
+<em>critical point</em> of <span class="math inline">\(f\)</span> if
+<span class="math inline">\(f\)</span> is not a submersion at <span class="math inline">\(p\)</span>. Then <span class="math inline">\(f(p)\)</span> is a critical value: <span class="math inline">\(q \in N\)</span> is a critical value if there is a
+<span class="math inline">\(p \in f(q)^{-1}\)</span> such that <span class="math inline">\(p\)</span> is a critical point. <span class="math inline">\(q \in N\)</span> is otherwise a regular value if
+this is not true.</p>
+<h2 id="orientation">Orientation</h2>
+<p><span class="math inline">\(M\)</span> is <em>orientable</em> if
+there is a smooth atlas <span class="math inline">\(\Phi = \{(U_\alpha,
+\phi_\alpha), \alpha \in I\}\)</span> representing the smooth structure
+on <span class="math inline">\(M\)</span> such that for each <span class="math inline">\(\alpha, \beta \in I\)</span> where <span class="math inline">\(U_\alpha
+\cap U_\beta \neq \emptyset\)</span>, the transition function <span class="math inline">\(\phi_\beta \circ \phi_\alpha^{-1}\)</span>
+satisfies <span class="math display">\[ \operatorname{det}(d(\phi_\beta
+\circ \phi_\alpha^{-1})_x) &gt; 0\]</span> for each <span class="math inline">\(x \in
+\phi_\alpha(U_\alpha \cap U_\beta)\)</span>.</p>
+<p>An <em>orientation</em> is a choice of atlas satisfying the
+orientability condition on <span class="math inline">\(M\)</span>. If
+the union of two atlases satisfying the orientatbility criterion also
+satsifies it, they determine the same orientation on <span class="math inline">\(M\)</span>.</p>
+<section class="footnotes footnotes-end-of-document" id="footnotes" role="doc-endnotes">
+<hr/>
+<ol>
+<li id="fn1"><p>Here, in the sense of equivalence above (i.e. trying to
+isolate atlases giving distinct smooth structures).<a class="footnote-back" href="#fnref1" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

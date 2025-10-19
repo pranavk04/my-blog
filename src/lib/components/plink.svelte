@@ -5,10 +5,9 @@
 
 <div>
 	<b>
-		<a class="text-lg text-primary-900 hover:text-primary-500" href={src}>
-			{title}
+		<a class=" text-primary-400 hover:text-primary-300" href={src}>
+			{title}:
 		</a>
 	</b>
-	<hr class="my-2"/>
 	<slot />
 </div>

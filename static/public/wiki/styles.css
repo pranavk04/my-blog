@@ -1,0 +1,251 @@
+/* --------------------
+   Global typography
+-------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;600&family=STIX+Two+Math&display=swap');
+
+html {
+  font-size: 17px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "STIX Two Text", "Latin Modern Roman", serif;
+  background-color: #fafafa;
+  color: #111;
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Better math font scaling for MathJax */
+mjx-container {
+  font-family: "STIX Two Math", "Latin Modern Math", serif !important;
+  font-size: 1.02em;
+}
+
+/* Headings */
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #123;
+  scroll-margin-top: 4rem;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 3px solid #345;
+  padding-bottom: 0.3rem;
+}
+h2 {
+  font-size: 1.5rem;
+  color: #234;
+  border-left: 4px solid #789;
+  padding-left: 0.4rem;
+}
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+h4 {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Breadcrumb navigation */
+
+nav.breadcrumbs {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+  color: #666;
+}
+nav.breadcrumbs a {
+  text-decoration: none;
+  color: #446;
+}
+nav.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Links */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 1.5em;
+}
+
+/* Code blocks */
+pre {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 0.7em 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+}
+
+/* Inline code */
+code {
+  background-color: #f2f2f2;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #ccd;
+  padding-left: 1em;
+  margin-left: 0;
+  color: #555;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+
+/* --------------------
+   Theorem Environments
+-------------------- */
+
+.theorem, .lemma, .proposition, .corollary,
+.definition, .example, .remark, .proof {
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  margin: 1.2em 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  border-left: 6px solid;
+}
+
+/* Theorem-family styles */
+.theorem, .proposition, .corollary {
+  background-color: #eef3ff;
+  border-color: #4a6edb;
+}
+.theorem b, .proposition b, .corollary b {
+  color: #2c46a0;
+}
+
+/* Lemma */
+.lemma {
+  background-color: #f1f5ff;
+  border-color: #5679cc;
+}
+.lemma b {
+  color: #3458aa;
+}
+
+/* Definition */
+.definition {
+  background-color: #fffbea;
+  border-color: #e2c300;
+}
+.definition b {
+  color: #a78b00;
+}
+
+/* Example */
+.example {
+  background-color: #f3fff3;
+  border-color: #3da75a;
+}
+.example b {
+  color: #1b6b35;
+}
+
+/* Remark */
+.remark {
+  background-color: #f8f8f8;
+  border-color: #aaa;
+}
+.remark b {
+  color: #333;
+}
+
+/* Proof */
+.proof {
+  background-color: #ffffff;
+  border-color: #ccc;
+  font-style: italic;
+}
+.proof b {
+  color: #000;
+  font-style: normal;
+}
+
+/* “End of proof” box symbol */
+.proof::after {
+  content: "∎";
+  float: right;
+  font-style: normal;
+  margin-left: 10px;
+  color: #555;
+}
+
+/* --------------------
+   Index page styling
+-------------------- */
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 0.3em 0;
+}
+
+ul li a {
+  display: inline-block;
+  background-color: #f2f6fc;
+  border-radius: 6px;
+  padding: 0.3em 0.6em;
+  transition: background-color 0.15s;
+}
+
+ul li a:hover {
+  background-color: #dce6ff;
+}
+
+/* --------------------
+   Responsive adjustments
+-------------------- */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/* Count sections with <h1> and reset per-section counters there */
+html { counter-reset: h1sec; }
+h1 {
+  counter-increment: h1sec;
+  /* reset all per-section theorem counters when a new H1 starts */
+  counter-reset: thm 0 lemma 0 prop 0 cor 0 defn 0 ex 0 remark 0;
+}
+
+/* Proofs: usually unnumbered; add a leading “Proof.” and keep your □ */
+.proof::before {
+  content: "Proof.";
+  font-weight: 700;
+  font-style: normal;
+  margin-right: .35em;
+}
+
+#TOC { background:#f8fbff; border:1px solid #e3eaf6; padding:0.75rem 1rem; border-radius:8px; }
+#TOC > ul { margin:0.4rem 0 0 1.2rem; }

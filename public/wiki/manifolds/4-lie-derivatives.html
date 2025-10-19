@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Lie derivatives</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+<link href="../styles.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+</head>
+<body><nav class="breadcrumbs"><a href="../index.html">Home</a> / <a href="index.html">manifolds</a> / Lie derivatives</nav>
+<header id="title-block-header">
+<h1 class="title">Lie derivatives</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#integral-curves" id="toc-integral-curves">Integral
+curves</a></li>
+<li><a href="#flow" id="toc-flow">Flow</a></li>
+</ul>
+</nav>
+<p>Now globally we define derivations as functions on <span class="math inline">\(C^\infty(M)\)</span> satisfying the Leibniz
+rule.</p>
+<div class="definition" id="blk:5.4.0.1"><span data-auto-label="1"><strong>Definition 5.4.0.1.</strong> </span>
+<p>Let <span class="math inline">\(X\)</span> be a smooth vector field
+on <span class="math inline">\(M\)</span>. Define <span class="math inline">\(L_X: C^\infty(M) \to C^\infty(M)\)</span> by <span class="math inline">\((L_Xf)(p) =
+X(p)f\)</span> for all <span class="math inline">\(p \in M\)</span>.
+This is the <strong>Lie derivative</strong>. We apply <span class="math inline">\(X(p)\)</span> to the germ determined by <span class="math inline">\(f\)</span> at <span class="math inline">\(p\)</span> since <span class="math inline">\(X\)</span> is a smooth section of <span class="math inline">\(M \to TM\)</span>.</p>
+</div>
+<p>Recall that <span class="math inline">\(X\)</span> restricted to some
+neighborhood <span class="math inline">\(U\)</span> can be written in
+partials of the coordinates, so we have an explicit equation <span class="math display">\[ (Xf)(p) = \sum_{i=1}^n
+a_i(p)\frac{\partial}{\partial x_i}(f \circ \phi^{-1})(\phi(p)).
+\]</span></p>
+<div class="theorem" id="blk:5.4.0.2"><span data-auto-label="1"><strong>Theorem 5.4.0.2.</strong> </span>
+<p>The assignment <span class="math inline">\(C^\infty(M, TM) \mapsto
+D(M)\)</span> defined by <span class="math inline">\(X \mapsto
+L_X\)</span> is a <span class="math inline">\(C^\infty(M)\)</span>-module isomorphism.</p>
+</div>
+<p>Now we can define a bracket operation giving a Lie algebra structure
+on vector fields: <span class="math display">\[ [X, Y](f) = XYf - YXf =
+L_XL_Yf - L_YL_Xf. \]</span> This is also a derivation as expected: we
+have a Lie algebra <span class="math inline">\((C^\infty(M, TM), [-,
+-])\)</span>.</p>
+<p>Recall that the pullback of a smooth function <span class="math inline">\(F: M \to N\)</span> is defined by the induced map
+<span class="math inline">\(F^*:
+C^\infty(N) \to C^\infty(M)\)</span> given by <span class="math inline">\(f \mapsto f \circ F\)</span>. Then at a point
+<span class="math inline">\(p \in M\)</span> the
+<strong>pullback</strong> is the map <span class="math inline">\(F_p^*:
+C^\infty_{F(p)}(N) \to C^\infty_p(M)\)</span> defined by <span class="math inline">\([(V, f)] \mapsto
+[(F^{-1}(V), f \circ F)]\)</span>.</p>
+<p>For each point <span class="math inline">\(p \in M\)</span>, the map
+<span class="math inline">\(dF_p: D_pM \to D_{F(p)}N\)</span> is given
+by <span class="math display">\[ dF_p(X)f = X(F^* f), \]</span> for
+<span class="math inline">\(X \in T_pM\)</span> a vector field and <span class="math inline">\(f \in C^\infty_{F(p)}(N)\)</span>. We can show
+this using local coordinates. But now this gives us a workable
+definition of the differential of <span class="math inline">\(F\)</span>
+at <span class="math inline">\(p\)</span>.</p>
+<h2 id="integral-curves">Integral curves</h2>
+<p>Recall that a smooth curve in <span class="math inline">\(M\)</span>
+is a smooth map <span class="math inline">\(\gamma: (a, b) \to
+M\)</span> where <span class="math inline">\(-\infty \leq a &lt; b
+\leq \infty\)</span>. For a smooth curve <span class="math inline">\(\gamma: (-\varepsilon, \varepsilon) \to M\)</span>
+with <span class="math inline">\(\gamma(0) = p\)</span>, we have <span class="math inline">\(\gamma'(0)\)</span> a derivation such that
+<span class="math display">\[ \gamma'(0)f = \frac{d}{dt}(f \circ
+\gamma)|_{t = 0}. \]</span></p>
+<p>Now if <span class="math inline">\(\gamma: I \to M\)</span> is a
+smooth curve where for all <span class="math inline">\(t \in I\)</span>
+we have <span class="math inline">\(\gamma'(t) =
+X(\gamma(t))\)</span> for some smooth vector field <span class="math inline">\(X \in \mathfrak{X}(M)\)</span>, then <span class="math inline">\(\gamma\)</span> is an <strong>integral
+curve</strong>.</p>
+<div class="theorem" id="blk:5.4.1.1"><span data-auto-label="1"><strong>Theorem 5.4.1.1.</strong> </span>
+<p>Let <span class="math inline">\(X \in \mathfrak{X}(M)\)</span>.</p>
+<ol type="1">
+<li>For any <span class="math inline">\(p \in M\)</span> there is an
+open interval <span class="math inline">\(I_p \subset \mathbb R\)</span>
+containing 0 such that there is an integral curve <span class="math inline">\(\phi_p: I_p \to M\)</span> of <span class="math inline">\(X\)</span> where <span class="math inline">\(\phi_p(0) = p\)</span> and <span class="math inline">\(I_p\)</span> is a maximal interval for such a
+<span class="math inline">\(\phi_p\)</span>. This is unique in the sense
+that if <span class="math inline">\(\gamma: I' \to M\)</span> has
+<span class="math inline">\(\gamma(0) = p\)</span>, then <span class="math inline">\(I' \subset I_p\)</span>, and <span class="math inline">\(\gamma = \phi_p|_{I'}\)</span>.</li>
+<li>For any <span class="math inline">\(p \in M\)</span> there is an
+open neighborhood <span class="math inline">\(p \in U \subset
+M\)</span>, open interval <span class="math inline">\(0 \in I
+\subset \mathbb R\)</span>, and a smooth map <span class="math inline">\(\phi: I \times U \to M\)</span> such that <span class="math display">\[ \begin{cases} \frac{\partial \phi}{\partial t} =
+X(\phi(t, q)) \\ \phi(0, q) = q. \end{cases}
+\]</span></li>
+</ol>
+</div>
+<p>This follows from existence and uniqueness of ordinary differential
+equations (as do many results for integral curves, since they are just
+ODEs).</p>
+<p>By linearity we note that <span class="math inline">\(q = \phi_p(t_0)
+\Longrightarrow \phi_q(t) = \phi_p(t + t_0)\)</span>.</p>
+<h2 id="flow">Flow</h2>
+<p>Now fix <span class="math inline">\(t\)</span> and vary <span class="math inline">\(p\)</span>. We have <span class="math inline">\(\phi_t: U \to M\)</span> by <span class="math inline">\(\phi_t(q) = \phi(t, q)\)</span>. This <span class="math inline">\(\phi_t\)</span> is the <strong>local flow</strong>
+of <span class="math inline">\(X\)</span>. There is a global flow <span class="math inline">\(\phi_t: M \to M\)</span> existing for all <span class="math inline">\(t \in \mathbb
+R\)</span>: a smooth map <span class="math inline">\(\phi: \mathbb R
+\times M \to M\)</span> such that <span class="math display">\[
+\frac{\partial \phi}{\partial t}(t, q) = X(\phi(t, q)), \]</span> where
+<span class="math inline">\(\phi(0, q) = q\)</span>.</p>
+<p>Now we extend the Lie derivative to a map on <span class="math inline">\(C^\infty(M, TM) \to C^\infty(M, TM)\)</span> by
+defining <span class="math inline">\(L_X(Y) = [X, Y]\)</span>. This
+satisfies the Leibniz rule <span class="math inline">\(L_X(fY) = L_X(f)
+Y + f(L_X(Y))\)</span>, for any smooth <span class="math inline">\(f\)</span> and vector fields <span class="math inline">\(Y\)</span> on <span class="math inline">\(M\)</span>.</p>
+<p><span class="math inline">\(L_X\)</span> is <span class="math inline">\(C^\infty(M)\)</span>-linear in <span class="math inline">\(X\)</span> on <span class="math inline">\(C^\infty(M)\)</span>, but it is <em>not</em> on
+<span class="math inline">\(C^\infty(M, TM)\)</span>: it is only <span class="math inline">\(\mathbb R\)</span>-linear in this case.</p>
+<p>The <strong>pushforward</strong> of a smooth diffeomorphism <span class="math inline">\(F: M \to N\)</span> on a smooth vector field <span class="math inline">\(X\)</span> is defined as <span class="math display">\[ F_*X(p) = (dF)_{F^{-1}(p)}(X(F^{-1}(p))).
+\]</span> The <strong>pullback</strong> given a smooth vector field
+<span class="math inline">\(Y\)</span> on <span class="math inline">\(N\)</span> is <span class="math inline">\(F^*Y =
+(F^{-1})_*(Y)\)</span>, which is a smooth vector field on <span class="math inline">\(M\)</span>.</p>
+<p>We have some important properties of flow:</p>
+<div class="proposition" id="blk:5.4.2.1"><span data-auto-label="1"><strong>Proposition 5.4.2.1.</strong> </span>
+<p>Fix a point <span class="math inline">\(p \in M\)</span>. There is an
+open neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(p\)</span> in <span class="math inline">\(M\)</span> and a local flow <span class="math inline">\(\phi_t: U
+\to M\)</span> of a vector field <span class="math inline">\(X\)</span>
+for <span class="math inline">\(t\)</span> in some neighborhood <span class="math inline">\((-\varepsilon, \varepsilon)\)</span> of 0. Then we
+have</p>
+<ol type="1">
+<li>For each <span class="math inline">\(f \in C^\infty_p(M)\)</span>,
+we have <span class="math display">\[ (L_Xf)(p) =
+\frac{d}{dt}|_{t=0}(\phi^*_tf)(p) = \frac{d}{dt}|_{t=0}(f \circ
+\phi_t)(p). \]</span></li>
+<li>For a smooth vector field <span class="math inline">\(Y\)</span>
+defined on an open neighborhood <span class="math inline">\(V\)</span>
+of <span class="math inline">\(p\)</span> in <span class="math inline">\(U\)</span>, we have <span class="math display">\[
+(L_XY)(p) = -\frac{d}{dt}|_{t=0} ((\phi_t)_*Y)(p) = \lim_{t \to 0}
+\frac{Y(p) -
+((\phi_t)_*Y)(p)}{t}. \]</span></li>
+</ol>
+</div>
+<p>We also have for some small positive number <span class="math inline">\(\delta\)</span> that for an open subset <span class="math inline">\(U \subset M\)</span>, and a function <span class="math inline">\(h: (-\delta, \delta) \times U \to \mathbb
+R\)</span> smooth such that <span class="math inline">\(h(0, q) =
+0\)</span> for all <span class="math inline">\(q \in
+U\)</span>, that <span class="math inline">\(h(t, q) = tg(t, q)\)</span>
+for some smooth <span class="math inline">\(g: (-\delta, \delta) \times
+U \to \mathbb R\)</span>.</p>
+</body>
+</html>

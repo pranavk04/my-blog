@@ -13,7 +13,7 @@
 
 </script>
 
-<h1 class="text-5xl font-black font-heading text-center mb-4">Contact Me</h1>
+<h1 class="text-3xl md:text-5xl font-black font-heading text-center mb-4">Contact Me</h1>
 <p>I'll try my best to respond in a timely manner, however don't be afraid to poke me again if you haven't gotten a response and it's been a while.</p>
 <div class="flex mt-4">
     <form class="space-y-4 mx-auto flex flex-col" on:submit|preventDefault={sendEmail}>
