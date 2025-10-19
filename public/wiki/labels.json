@@ -1,0 +1,182 @@
+{
+  "blk:1.1.1.1": {
+    "type": "definition",
+    "path": "abelian_varieties/test.html",
+    "comp": "1.1.1.1",
+    "file_no": "1.1",
+    "sec_no": 1,
+    "blk_no": 1,
+    "global_no": 1
+  },
+  "blk:1.1.1.2": {
+    "type": "remark",
+    "path": "abelian_varieties/test.html",
+    "comp": "1.1.1.2",
+    "file_no": "1.1",
+    "sec_no": 1,
+    "blk_no": 2,
+    "global_no": 2
+  },
+  "blk:2.1.1.1": {
+    "type": "theorem",
+    "path": "arakelov_theory/metrized_line_bundles.html",
+    "comp": "2.1.1.1",
+    "file_no": "2.1",
+    "sec_no": 1,
+    "blk_no": 1,
+    "global_no": 3
+  },
+  "thm:modular_forms_line_bundles": {
+    "type": "theorem",
+    "path": "automorphic_forms/line_bundles.html",
+    "comp": "3.2.0.1",
+    "file_no": "3.2",
+    "sec_no": 0,
+    "blk_no": 1,
+    "global_no": 4
+  },
+  "blk:5.1.1.1": {
+    "type": "definition",
+    "path": "manifolds/1-manifolds.html",
+    "comp": "5.1.1.1",
+    "file_no": "5.1",
+    "sec_no": 1,
+    "blk_no": 1,
+    "global_no": 5
+  },
+  "blk:5.2.3.1": {
+    "type": "theorem",
+    "path": "manifolds/2-tangent-bundle.html",
+    "comp": "5.2.3.1",
+    "file_no": "5.2",
+    "sec_no": 3,
+    "blk_no": 1,
+    "global_no": 6
+  },
+  "blk:5.2.3.2": {
+    "type": "remark",
+    "path": "manifolds/2-tangent-bundle.html",
+    "comp": "5.2.3.2",
+    "file_no": "5.2",
+    "sec_no": 3,
+    "blk_no": 2,
+    "global_no": 7
+  },
+  "blk:5.2.3.3": {
+    "type": "lemma",
+    "path": "manifolds/2-tangent-bundle.html",
+    "comp": "5.2.3.3",
+    "file_no": "5.2",
+    "sec_no": 3,
+    "blk_no": 3,
+    "global_no": 8
+  },
+  "blk:5.3.1.1": {
+    "type": "definition",
+    "path": "manifolds/3-vector-bundles.html",
+    "comp": "5.3.1.1",
+    "file_no": "5.3",
+    "sec_no": 1,
+    "blk_no": 1,
+    "global_no": 9
+  },
+  "blk:5.3.1.2": {
+    "type": "example",
+    "path": "manifolds/3-vector-bundles.html",
+    "comp": "5.3.1.2",
+    "file_no": "5.3",
+    "sec_no": 1,
+    "blk_no": 2,
+    "global_no": 10
+  },
+  "blk:5.3.2.1": {
+    "type": "lemma",
+    "path": "manifolds/3-vector-bundles.html",
+    "comp": "5.3.2.1",
+    "file_no": "5.3",
+    "sec_no": 2,
+    "blk_no": 1,
+    "global_no": 11
+  },
+  "blk:5.3.3.1": {
+    "type": "proposition",
+    "path": "manifolds/3-vector-bundles.html",
+    "comp": "5.3.3.1",
+    "file_no": "5.3",
+    "sec_no": 3,
+    "blk_no": 1,
+    "global_no": 12
+  },
+  "blk:5.3.3.2": {
+    "type": "definition",
+    "path": "manifolds/3-vector-bundles.html",
+    "comp": "5.3.3.2",
+    "file_no": "5.3",
+    "sec_no": 3,
+    "blk_no": 2,
+    "global_no": 13
+  },
+  "blk:5.3.3.3": {
+    "type": "theorem",
+    "path": "manifolds/3-vector-bundles.html",
+    "comp": "5.3.3.3",
+    "file_no": "5.3",
+    "sec_no": 3,
+    "blk_no": 3,
+    "global_no": 14
+  },
+  "blk:5.4.0.1": {
+    "type": "definition",
+    "path": "manifolds/4-lie-derivatives.html",
+    "comp": "5.4.0.1",
+    "file_no": "5.4",
+    "sec_no": 0,
+    "blk_no": 1,
+    "global_no": 15
+  },
+  "blk:5.4.0.2": {
+    "type": "theorem",
+    "path": "manifolds/4-lie-derivatives.html",
+    "comp": "5.4.0.2",
+    "file_no": "5.4",
+    "sec_no": 0,
+    "blk_no": 2,
+    "global_no": 16
+  },
+  "blk:5.4.1.1": {
+    "type": "theorem",
+    "path": "manifolds/4-lie-derivatives.html",
+    "comp": "5.4.1.1",
+    "file_no": "5.4",
+    "sec_no": 1,
+    "blk_no": 1,
+    "global_no": 17
+  },
+  "blk:5.4.2.1": {
+    "type": "proposition",
+    "path": "manifolds/4-lie-derivatives.html",
+    "comp": "5.4.2.1",
+    "file_no": "5.4",
+    "sec_no": 2,
+    "blk_no": 1,
+    "global_no": 18
+  },
+  "blk:5.5.1.1": {
+    "type": "definition",
+    "path": "manifolds/5-tensors.html",
+    "comp": "5.5.1.1",
+    "file_no": "5.5",
+    "sec_no": 1,
+    "blk_no": 1,
+    "global_no": 19
+  },
+  "blk:5.5.1.2": {
+    "type": "definition",
+    "path": "manifolds/5-tensors.html",
+    "comp": "5.5.1.2",
+    "file_no": "5.5",
+    "sec_no": 1,
+    "blk_no": 2,
+    "global_no": 20
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Vector bundles</title>
+<style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+<link href="../styles.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+</head>
+<body><nav class="breadcrumbs"><a href="../index.html">Home</a> / <a href="index.html">manifolds</a> / Vector bundles</nav>
+<header id="title-block-header">
+<h1 class="title">Vector bundles</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#definition" id="toc-definition">Definition</a></li>
+<li><a href="#derivations" id="toc-derivations">Derivations</a></li>
+<li><a href="#subbundles" id="toc-subbundles">Subbundles</a></li>
+<li><a href="#operations-on-vector-bundles" id="toc-operations-on-vector-bundles">Operations on vector
+bundles</a></li>
+</ul>
+</nav>
+<h2 id="definition">Definition</h2>
+<p>The tangent bundle is a special case of the more general concept of a
+<em>vector bundle</em>. Roughly, a real vector bundle of rank <span class="math inline">\(r\)</span> over <span class="math inline">\(M\)</span> is a family of <span class="math inline">\(r\)</span>-dimensional real vector spaces
+parameterized by <span class="math inline">\(M\)</span>:</p>
+<div class="definition" id="blk:5.3.1.1"><span data-auto-label="1"><strong>Definition 5.3.1.1.</strong> </span>
+<p>A real smooth vector bundle of rank <span class="math inline">\(r\)</span> over <span class="math inline">\(M\)</span> consists of</p>
+<ol type="1">
+<li>a smooth manifold <span class="math inline">\(E\)</span> called the
+<em>total space</em>, and</li>
+<li>a smooth surjective map <span class="math inline">\(\pi: E \to
+M\)</span>.</li>
+</ol>
+<p>such that the following hold:</p>
+<ol type="1">
+<li>local trivializations: there is an open cover <span class="math inline">\(\{U_\alpha: \alpha \in I\}\)</span> of <span class="math inline">\(M\)</span> (here <span class="math inline">\(U_\alpha\)</span> are just opens, not necessarily
+coordinate patches) and smooth diffeomorphisms <span class="math inline">\(h_\alpha:
+\pi^{-1}(U_\alpha) \to U_\alpha \times \mathbb R^r\)</span> such that
+<span class="math inline">\(\pi_\alpha = \mathrm{pr}_1 \circ
+h_\alpha\)</span>, where <span class="math inline">\(\pi_\alpha\)</span>
+is restriction of <span class="math inline">\(\pi\)</span> to <span class="math inline">\(\pi^{-1}(U_\alpha)\)</span>. The <span class="math inline">\(h_\alpha\)</span> are the local
+trivializations.</li>
+<li>if the intersection <span class="math inline">\(U_\alpha \cap
+U_\beta\)</span> is nonempty, then the map <span class="math inline">\(h_\beta \circ
+h_\alpha^{-1}\)</span> is a smooth diffeomorhpism of the form <span class="math inline">\(h_\beta \circ h_\alpha^{-1}(x, v) = (x,
+g_{\beta\alpha}(x)v)\)</span> where <span class="math inline">\(g_{\beta\alpha}\)</span> is a smooth map.</li>
+</ol>
+</div>
+<p>If condition 2. above does not hold, then <span class="math inline">\(\pi: E \to M\)</span> is a fiber bundle. As an
+easy example, consider the <em>product bundle</em> of rank <span class="math inline">\(r\)</span>: <span class="math inline">\(\pi =
+\mathrm{pr}_1: E = M\times\mathbb R^r \to M\)</span> where <span class="math inline">\(\mathrm{pr}_1\)</span> is the projection onto the
+first factor.</p>
+<p>A vector bundle is a trivial vector bundle of rank <span class="math inline">\(r\)</span> if there is a smooth diffeomorphism or
+homeomorhpism <span class="math inline">\(h: E \to M \times \mathbb
+R^r\)</span> such that $h4 commutes with the projection maps in the
+sense that <span class="math inline">\(\pi = \mathrm{pr}_1 \circ
+h\)</span>, and the restriction of $h4 to each fiber <span class="math inline">\(h_x: E_x \to
+\{x\}\times \mathbb R^r\)</span> is a linear isomorphism.</p>
+<p>This implies there is a global trivialization <span class="math inline">\(h\)</span>.</p>
+<p>Now we can realize the tangent bundle as a vector bundle:</p>
+<div class="example" id="blk:5.3.1.2"><span data-auto-label="1"><strong>Example 5.3.1.2.</strong> </span>
+<p>Let <span class="math inline">\(M\)</span> be a smooth manifold of
+dimension <span class="math inline">\(n\)</span>. Then <span class="math inline">\(\pi: TM \to M\)</span> is a smooth vector bundle
+of rank <span class="math inline">\(n\)</span> over <span class="math inline">\(M\)</span>. Let <span class="math inline">\(\Phi =
+\{(U_\alpha, \phi_\alpha): \alpha \in I\}\)</span> be a smooth atlas of
+the smooth manifold <span class="math inline">\(M\)</span>. Define local
+trivializations <span class="math inline">\(h_\alpha: \pi^{-1}(U_\alpha)
+\to U_\alpha \times
+\mathbb R^n\)</span> by <span class="math inline">\(h_\alpha(p, v) = (p,
+\theta^{-1}_{U_\alpha, \phi_\alpha, p}(v))\)</span>, where <span class="math inline">\(p \in U_
+alpha\)</span> and <span class="math inline">\(v \in T_pM\)</span>. The
+transition function on nonempty intersections is <span class="math display">\[h_\beta\circ h_\alpha^{-1}(p,u) = (p,
+d(\phi_\beta \circ \phi_\alpha^{-1})_{\phi_\alpha(p)}(u)).
+\]</span></p>
+<p>Since <span class="math inline">\(p \mapsto d(\phi_\beta \circ
+\phi_\alpha)^{-1})_{\phi_\alpha(p)}\)</span> is a smooth map from <span class="math inline">\(U_\alpha \cap U_\beta \to
+\operatorname{GL}_{n}(\mathbb R)\)</span>, this indeed gives <span class="math inline">\(TM\)</span> the structure of a vector bundle.</p>
+</div>
+<p>A smooth <em>section</em> of a smooth vector bundle <span class="math inline">\(\pi: E\to M\)</span> is a smooth map <span class="math inline">\(s: M \to E\)</span> such that <span class="math inline">\(\pi\circ s = \operatorname{id}_M\)</span>.</p>
+<p>Now <span class="math inline">\(\pi\)</span> is trivial iff (say it
+has rank <span class="math inline">\(r\)</span>) there are smooth
+sections <span class="math inline">\(s_1, \ldots, s_r\)</span> of <span class="math inline">\(\pi\)</span> such that for each <span class="math inline">\(x \in M\)</span>, <span class="math inline">\(\{s_1(x), \ldots, s_r(x)\}\)</span> forms a basis
+of <span class="math inline">\(E_x\)</span>, the fiber at <span class="math inline">\(x\)</span>.</p>
+<p>A <em>smooth vector field</em> is a smooth section of <span class="math inline">\(TM\)</span>.</p>
+<h2 id="derivations">Derivations</h2>
+<p>Recall that the behavior of functions at germs (i.e. there is a small
+open neighborhood in the intersections of both domains such that the
+functions have the same behavior) is an equivalence relation of smooth
+functions. The set <span class="math inline">\(C^\infty_p(M)\)</span> of
+germs has a ring structure. In fact there is a surjective map from <span class="math inline">\(C^\infty(M) \to C^\infty_p(M)\)</span>.</p>
+<p>A <strong>derivation</strong> on <span class="math inline">\(C^\infty_p(M)\)</span> is an <span class="math inline">\(\mathbb R\)</span>-linear map <span class="math inline">\(\delta: C^\infty_p(M) \to
+\mathbb{R}\)</span> such that it satisfies the Leibniz rule for all
+functions <span class="math inline">\(f, g\)</span>: <span class="math inline">\(\delta(fg) =
+\delta(f)g + f\delta(g)\)</span>.</p>
+<div class="lemma" id="blk:5.3.2.1"><span data-auto-label="1"><strong>Lemma 5.3.2.1.</strong> </span>
+<p>If <span class="math inline">\(\delta\)</span> is a derivation on
+<span class="math inline">\(C^\infty_0(\mathbb R^n)\)</span>, then we
+can write <span class="math display">\[ \delta = \sum_{i=1}^n a_i
+\frac{\partial}{\partial x_i}(0), \]</span> where <span class="math inline">\(a_i = \delta(x_i)\)</span>.</p>
+</div>
+<p>Now let <span class="math inline">\(D_pM\)</span> be the space of
+derivations on <span class="math inline">\(C_p^\infty(M)\)</span>. There
+is an isomorphism <span class="math inline">\(T_pM
+\xrightarrow{\sim} D_pM\)</span> given by <span class="math display">\[
+[(U, \phi, \vec{u})] \mapsto \sum_{i=1}^n u_i \frac{\partial}{\partial
+x_i}(p), \]</span> where we have defined <span class="math inline">\(\frac{\partial}{\partial x_i}(p): C^\infty_p(M)
+\to \mathbb R\)</span> by <span class="math inline">\(f \mapsto
+\frac{\partial(f \circ \phi^{-1})}{\partial x_i}(\phi(p))\)</span><a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Now we can write tangent vectors as derivations. Now suppose we have
+<span class="math inline">\((U, \phi)\)</span> a coordinate chart for
+<span class="math inline">\(M\)</span> and have <span class="math inline">\(\phi = (x_1, \ldots, x_n)\)</span>. Now we have
+<span class="math inline">\(\tilde phi: TU \to \phi(U) \times \mathbb
+R^n\)</span> by <span class="math inline">\(\tilde \phi(p, v) =
+(\phi(p), \theta^{-1}_{U, \phi, p}(v))\)</span>, and now we can write
+<span class="math display">\[ \theta_{U, \phi, p}(u) \mapsto
+\sum_{i=1}^n u_i\frac{\partial}{\partial x_i}(p). \]</span> Then we have
+<span class="math inline">\(\tilde \phi^{-1}: \phi(U) \times \mathbb R^n
+\to TU\)</span> by $^{-1}(x, u) =(^{-1}(x), _{i=1}^n u_i (p) ). $$</p>
+<p>Then locally we have smooth sections <span class="math inline">\(\frac{\partial}{\partial x_i}: U \to TU\)</span>
+where <span class="math inline">\(p \mapsto (p,
+\frac{\partial}{\partial x_i}(p))\)</span> of the vector bundle <span class="math inline">\(TU \to U\)</span>. At each <span class="math inline">\(p\)</span> the evaluation at <span class="math inline">\(p\)</span> also forms a basis for <span class="math inline">\(T_pU\)</span>, so we have a smooth
+<strong>frame</strong> for <span class="math inline">\(TU \to
+U\)</span>: an <em>ordered</em> basis for the fiber at each <span class="math inline">\(p\)</span>.</p>
+<p>Now we write <span class="math inline">\(C^\infty(TU, U)\)</span> for
+the smooth sections of <span class="math inline">\(TU \to U\)</span>.
+There is an isomorphism thus <span class="math display">\[ T_pM =
+\bigoplus_{i=1}^n\mathbb R \frac{\partial}{\partial x_i}(p). \]</span>
+Locally we have <span class="math display">\[ C^\infty(U, TU) =
+\bigoplus_{i=1}^n C^\infty(U)\frac{\partial}{\partial x_i}.
+\]</span></p>
+<h2 id="subbundles">Subbundles</h2>
+<p>Let <span class="math inline">\(E\)</span> be a smooth vector bundle
+of rank <span class="math inline">\(r\)</span>. <span class="math inline">\(F \subseteq E\)</span> is a smooth subbundle of
+rank <span class="math inline">\(k\)</span> is we have a local
+trivialization <span class="math inline">\(h: \pi^{-1}(U) \to U\times
+\mathbb R^r\)</span> where <span class="math inline">\(h(F\cap\pi^{-1}(U)) =
+U \cap (\mathbb R^k \times \{0\})\)</span> for some open neighborhood
+<span class="math inline">\(U\)</span> for all <span class="math inline">\(p \in M\)</span>.</p>
+<p>The map <span class="math inline">\(\pi|_F: F \to M\)</span> is a
+smooth vector bundle of rank <span class="math inline">\(k\)</span>,
+where the transition functions are the restriction of those for <span class="math inline">\(E\)</span>. We denote the fiber at <span class="math inline">\(p\)</span> by <span class="math inline">\(F_p =
+E_p \cap F\)</span>.</p>
+<div class="proposition" id="blk:5.3.3.1"><span data-auto-label="1"><strong>Proposition 5.3.3.1.</strong> </span>
+<p>Say we have a collection <span class="math inline">\(\{F_p\}_p\)</span> of <span class="math inline">\(k\)</span>-dimensional linear subspaces <span class="math inline">\(F_p \subseteq E_p\)</span>, and let <span class="math inline">\(F = \cup_p F_p\)</span>. Then <span class="math inline">\(F\)</span> is a smooth subbundle of <span class="math inline">\(E\)</span> of rank <span class="math inline">\(k\)</span> iff for <span class="math inline">\(p
+\in M\)</span> we have <span class="math inline">\(U\)</span> an open
+neighborhood of <span class="math inline">\(p\)</span> and smooth
+sections <span class="math inline">\(s_1, \ldots, s_k\)</span> of <span class="math inline">\(\pi: \pi^{-1}(U) = E|_U
+\to U\)</span> such that for all <span class="math inline">\(q \in
+U\)</span> the <span class="math inline">\(s_i(q)\)</span> form a basis
+of <span class="math inline">\(F_q\)</span>.</p>
+</div>
+<p>A <strong>distribution</strong> of dimension <span class="math inline">\(k\)</span> is a collection <span class="math inline">\(\{F_p \subset T_pM: p \in M\}\)</span> of <span class="math inline">\(k\)</span>-dimensional subspaces <span class="math inline">\(F_p\)</span> such that <span class="math inline">\(F = \cup_p F_p\)</span> is a smooth subbundle of
+rank <span class="math inline">\(k\)</span> of <span class="math inline">\(TM\)</span>.</p>
+<p>Then this is equivalent to for each <span class="math inline">\(p \in
+M\)</span>, there being an open neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(p\)</span> and vector fields <span class="math inline">\(X_1, \ldots, X_k\)</span> on <span class="math inline">\(U\)</span> such that <span class="math inline">\(\{X_i(q)\}_{q \in U\}\)</span> is a basis of <span class="math inline">\(F_q\)</span>.</p>
+<p>Now <span class="math inline">\(C^\infty(M, F)\)</span> is the space
+of smooth sections of <span class="math inline">\(F\)</span>, and this
+is a submodule of <span class="math inline">\(C^\infty(M,
+TM)\)</span>.</p>
+<div class="definition" id="blk:5.3.3.2"><span data-auto-label="1"><strong>Definition 5.3.3.2.</strong> </span>
+<p>Let <span class="math inline">\(F\)</span> be a smooth <span class="math inline">\(k\)</span>-distribution on <span class="math inline">\(M\)</span> an <span class="math inline">\(n\)</span>-manifold.</p>
+<ol type="1">
+<li><span class="math inline">\(F\)</span> is involutive if <span class="math inline">\(C^\infty(M, F)\)</span> is a Lie subalgebra of
+<span class="math inline">\(C^\infty(M, TM)\)</span> (with the usual
+bracket).</li>
+<li><span class="math inline">\(F\)</span> is completely integrable if
+for each <span class="math inline">\(p \in M\)</span> there is a chart
+<span class="math inline">\((U, \phi)\)</span> for <span class="math inline">\(M4 around\)</span>p4 such that <span class="math inline">\(\forall q \in U\)</span> <span class="math inline">\(F_q\)</span> is spanned by <span class="math inline">\(\{\frac{\partial}{\partial x_i}(q)\}\)</span>
+where <span class="math inline">\(x_1, \ldots, x_n\)</span> are local
+coordinates on <span class="math inline">\(U\)</span>.</li>
+</ol>
+</div>
+<p>This is equivalent to saying that for each <span class="math inline">\(p\)</span> there is a <span class="math inline">\(k\)</span>-dimensional submanifold <span class="math inline">\(s\)</span> such that <span class="math inline">\(p
+\in S\)</span>, and for all <span class="math inline">\(q \in
+S\)</span>, <span class="math inline">\(T_qS = F_q\)</span>.</p>
+<div class="theorem" id="blk:5.3.3.3"><span data-auto-label="1"><strong>Theorem 5.3.3.3.</strong> </span>
+<p>A smooth distribution <span class="math inline">\(F\)</span> on a
+smooth manifold is completely integrable iff <span class="math inline">\(F\)</span> is involutive.</p>
+</div>
+<h2 id="operations-on-vector-bundles">Operations on vector bundles</h2>
+<p>Let <span class="math inline">\(E^*\)</span> be the set <span class="math inline">\(\cup_p E^*_p\)</span> for <span class="math inline">\(p \in M\)</span>. We define <span class="math inline">\(\pi^*: E^* \to M\)</span> such that <span class="math inline">\(\pi^*(E^*_p) = \{p\}\)</span>. We can equip this
+with a smooth manifold structure: let <span class="math inline">\(\Gamma(M, E^*)\)</span> be the set of maps <span class="math inline">\(\phi: M \to E^*\)</span> such that <span class="math inline">\(\phi(x) \in E_x^*\)</span> (<span class="math inline">\(x \in M\)</span>). Then <span class="math inline">\(\phi\)</span> is a smooth section of <span class="math inline">\(E^* \to M\)</span> if for every smooth section
+<span class="math inline">\(s: M \to E\)</span>, <span class="math inline">\(\langle \phi, s\rangle: M \to
+\mathbb R\)</span> is smooth. Equivalently given a <span class="math inline">\(C^\infty\)</span> frame <span class="math inline">\(\{s_{\alpha_i}\}\)</span> for <span class="math inline">\(i = 1, \ldots,
+r\)</span>, of <span class="math inline">\(E|_{U_\alpha}\)</span>, the
+dual of each <span class="math inline">\(s\)</span> gives a <span class="math inline">\(C^\infty\)</span> frame of <span class="math inline">\(E^*|_{U_\alpha}\)</span>. Then we can write [ (x)
+= _{i=1}^r a_i(x)s^*_{<em>i}(x), x U</em>. ] Iff the <span class="math inline">\(a_i \in
+C^\infty(U_\alpha)\)</span> then <span class="math inline">\(\phi\)</span> is a smooth section.</p>
+<p>We have the standard vector space operations on vector bundles:</p>
+<ol type="1">
+<li><span class="math inline">\(E\oplus F\)</span> is a vector bundle
+with frame <span class="math inline">\(\{e_1, \ldots, e_r, f_1, \ldots,
+f_s\}\)</span>.</li>
+<li><span class="math inline">\(E\otimes F\)</span> has frame <span class="math inline">\(\{e_i\otimes f_j\}\)</span>,</li>
+<li><span class="math inline">\(\wedge^k E\)</span> has frame <span class="math inline">\(\{e_{i_1}\wedge \ldots \wedge e_{i_k}\}\)</span>,
+where <span class="math inline">\(1\leq i_1 &lt; \cdots &lt; i_k
+\leq r\)</span>.</li>
+</ol>
+<section class="footnotes footnotes-end-of-document" id="footnotes" role="doc-endnotes">
+<hr/>
+<ol>
+<li id="fn1"><p>this is just change of coordinates on <span class="math inline">\(f\)</span>.<a class="footnote-back" href="#fnref1" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
