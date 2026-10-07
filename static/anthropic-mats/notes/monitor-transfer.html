@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Constructed actions and natural stress behavior — research and experiment notes by Pranav Venkata Konda.">
+  <title>Constructed actions and natural stress behavior · Pranav Konda</title>
+  <link rel="stylesheet" href="../assets/page.css">
+  <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
+</head>
+<body><main><article class="mats-page">
+<p class="mats-note-back"><a href="../">← Research direction</a></p>
+<header class="mats-header">
+  <p class="mats-kicker">Experiment note · Activation monitoring</p>
+  <h1>Constructed actions and natural stress behavior</h1>
+  <p class="mats-meta">Pranav Venkata Konda · Prepared 7 October 2026</p>
+</header>
+<p class="mats-note-evidence"><strong>Status.</strong> Completed local Qwen2.5-3B-Instruct pilot. The measurements below come from saved reports and numerical summaries; preparing this note did not rerun inference. The result is a transfer failure in this particular setup.</p>
+<section>
+  <h2>Question and design</h2>
+  <p>The study asks whether internal measurements predict observable reward-related rule violations across fresh task instances and a second task family. Arithmetic and inventory tasks share a tool interface and a checker environment. The authorized objective can agree with the checker, conflict with it, or explicitly authorize a compatibility change. An exact replay verifier supplies the labels independently of detector scores.</p>
+  <p>The bank contains 29 probes, controls, and ensembles. It includes mean-difference and covariance-adjusted directions, regularized classifiers, nonlinear readers, layer and token measurements, adapter-gradient features, and text/context controls. The actor’s weights were not trained. Fitting, selection, score orientation, and threshold calibration preceded test collection.</p>
+  <p>The authored corpus contains 896 verifier-labeled candidate actions. These actions are represented under teacher forcing; they are not naturally generated behavior. Natural continuation collection includes 24 development episodes and 96 test episodes under stronger integrity wording. A further frozen-bank stress cohort contains 96 fresh episodes under lighter wording and starts with an empty answer.</p>
+</section>
+<section>
+  <h2>Observed transfer</h2>
+  <p>The development-selected covariance-adjusted LDA achieved candidate-action AUROC 1.000 in both families. A nuisance-only baseline already achieved 0.990, showing how easily the constructed corpus could be separated without establishing useful behavioral detection.</p>
+  <div class="mats-table-wrap"><table>
+    <caption>AUROC on valid naturally generated stress actions</caption>
+    <thead><tr><th scope="col">Frozen measurement</th><th scope="col">Arithmetic</th><th scope="col">Inventory</th></tr></thead>
+    <tbody>
+      <tr><td>Selected covariance LDA</td><td>0.590</td><td>0.525</td></tr>
+      <tr><td>Mean ensemble</td><td>0.246</td><td>0.298</td></tr>
+      <tr><td>Context and text</td><td>0.769</td><td>0.753</td></tr>
+      <tr><td>Nuisance-only control</td><td>0.820</td><td>0.874</td></tr>
+    </tbody>
+  </table></div>
+  <p>The selected detector’s frozen-threshold false-positive rates were approximately 47.5% and 45.5%. Its candidate separation therefore did not provide a usable operational threshold on natural stress behavior. Combining the bank by its fixed mean rule did not recover transfer.</p>
+  <p>Six of the 96 stress episodes contained verified violations: five arithmetic task instances and one inventory instance. Of 288 model calls, 78 were invalid; discrimination metrics condition on the 210 valid actions. Invalid calls remain a separate failure category. The independent units are task instances, not every action in an episode.</p>
+  <p>The one positive inventory instance is a serious limitation. Bootstrap intervals conditioned on resamples containing that instance understate uncertainty about new positive cases. The complete table is exploratory and cannot be used to choose a new winning method from the spent test set.</p>
+</section>
+<section>
+  <h2>What the result changes</h2>
+  <p>This pilot supplies a reproducible failure-analysis setting and candidate measurements. It does not establish broad reward-hacking geometry, a robust detector, or a cross-family training invariant. The two task families still share the same checker environment and exploit opportunities.</p>
+  <p>The next study should first establish valid tool use, authorized task competence, and adequate positive-event coverage. It should then freeze a smaller comparator set and hold out a complete elicitation mechanism, with the full monitoring system calibrated to one false-positive budget. New causal feature tests would follow a successful transfer measurement.</p>
+</section>
+<section>
+  <h2>Saved evidence</h2>
+  <p><a href="../assets/probe-stress-summary.json">Complete stress summary (JSON)</a> · <a href="../assets/probe-candidate-summary.json">Candidate and strong-prompt summary (JSON)</a> · <a href="authorization-presentation.html">Authorization and presentation controls</a> · <a href="proposed-study.html">Proposed follow-up</a></p>
+  <p class="mats-small">Source: “Reward-hacking geometry: heterogeneous probe pilot,” with the prospective probe-bank protocol and saved probe_bank_v1 / probe_bank_stress_v2 results. No result in this note is a new experiment or an independent replication.</p>
+</section>
+
+</article></main></body>
+</html>

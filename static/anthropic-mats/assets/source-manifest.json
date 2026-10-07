@@ -1,0 +1,49 @@
+{
+  "prepared": "2026-10-07",
+  "source_kind": "author PDFs and saved local experiment summaries",
+  "inference_rerun": false,
+  "files": [
+    {
+      "file": "attention-identifiability-preprint.pdf",
+      "sha256": "05db21bf2f3feb5e4de327f807ab28d55ce308a45e429ee240ac0f1956828253",
+      "bytes": 299447,
+      "status": "original saved source"
+    },
+    {
+      "file": "mars-working-preprint.pdf",
+      "sha256": "82235ee44a510143fb6e815fd5a62dccce217b25911530f772c6e4a38442ebfa",
+      "bytes": 552203,
+      "status": "original saved source"
+    },
+    {
+      "file": "activation-monitor-generalization-note.pdf",
+      "sha256": "84cd8343eebca6bf7a05880371be450cf2c8adaf0a8a40fd05d5d577b1aa56dd",
+      "bytes": 281168,
+      "status": "original saved source"
+    },
+    {
+      "file": "attention-reproducibility.zip",
+      "sha256": "8a95701698da6c3e794539ffed5c843a2a6019cc88d032a48aae21d4b54b005c",
+      "bytes": 81888,
+      "status": "author reproducibility artifact"
+    },
+    {
+      "file": "probe-stress-summary.json",
+      "sha256": "4cbff5dc17da6ca04abfd3c33eb4e31e8cad248687d7ead52e1a54b41e411e5a",
+      "bytes": 86218,
+      "status": "original saved source"
+    },
+    {
+      "file": "probe-candidate-summary.json",
+      "sha256": "52e8fec12010e09ba5039a31286e2a465fc34398d7407639feba9501dbec4be0",
+      "bytes": 104671,
+      "status": "original saved source"
+    },
+    {
+      "file": "probe-format-summary.json",
+      "sha256": "f97e16191285e02c4c5e2557408b3f5df83bb13e51aa6b6b4536113573290f5b",
+      "bytes": 9610,
+      "status": "original saved source"
+    }
+  ]
+}

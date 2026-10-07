@@ -1,0 +1,27 @@
+<header class="mats-header">
+  <p class="mats-kicker">Experiment note · Normalized attention</p>
+  <h1>Exact identification and numerical sensitivity</h1>
+  <p class="mats-meta">Pranav Venkata Konda · Submitted manuscript; arXiv processing</p>
+</header>
+<p class="mats-note-evidence"><strong>Status.</strong> Numerical evidence accompanying <a href="../assets/attention-identifiability-preprint.pdf">Identifiability and Observability of Deep Normalized Attention</a>, §6 and Appendix F. These are calculations in the declared attention family; they are not experiments on pretrained safety monitors.</p>
+<section>
+  <h2>What is observed</h2>
+  <p>The paper studies deep, unmasked, single-head attention with known positive nonconstant real-analytic normalizers. The observation is the network’s input–output function, with finite input banks used for sensitivity measurements. Effective scores and the combined value map remove native factorization gauges.</p>
+  <p>The mathematical results distinguish exact identification, exceptional fibers, finite Taylor orders, and the decay of native Jacobian singular values near simultaneous query/key collapse. A parameter can be uniquely determined while its effect on finite observations becomes extremely small. The numerical work tests this distinction in specified fixtures.</p>
+</section>
+<section>
+  <h2>Depth-dependent contact orders</h2>
+  <p>A depth-four scalar softmax calculation at 110 digits tests the predicted contact orders (1, 5, 17, 53). At scales 0.04 and 0.02, the final-pair slopes are (0.999994, 5.002211, 17.001118, 53.000562), with maximum error below 0.0023. The weakest singular value at scale 0.02 is approximately 3.86 × 10<sup>−92</sup>.</p>
+  <p>This supports the predicted powers in that fixture. High precision and agreement with predicted slopes do not independently certify every proof or establish a rate for general transformer architectures.</p>
+</section>
+<section>
+  <h2>The complete matrix spectrum</h2>
+  <p>For four tokens, width four, depth three, query/key rank two, and a bank of 48 inputs, the native Jacobian has shape 768 × 96. Its exact positive rank is 52. Under a relative cutoff of 10<sup>−10</sup> times the largest singular value, float64 automatic differentiation reports rank 40 at small scales.</p>
+  <p>The analytic Jacobian at 120 digits resolves all twelve weak positive singular values. At scale 0.06, applying the same cutoff still reports rank 40 even at high precision, because the weak values lie below the chosen threshold. Numerical rank therefore depends on both precision and the declared observation threshold.</p>
+</section>
+<section>
+  <h2>One unknown parameter under noise</h2>
+  <p>A separate recovery calculation fixes all weights except the final query/key factor, constrained to be nonnegative. It adds Gaussian noise to an output mean and inverts the known mean response, clipping observations outside its attainable range. As the noise standard deviation rises from 1.57 × 10<sup>−10</sup> to 1.57 × 10<sup>−7</sup>, empirical relative root-mean-square error rises from 0.0050 to 1.31.</p>
+  <p>The experiment isolates one known observation problem. It does not measure general network reconstruction or training performance. Its relevance to monitoring is a question to test: whether a small measured change reflects a stable behavioral equivalence or weak sensitivity under the monitor’s actual inputs and noise level.</p>
+  <p><a href="../assets/attention-identifiability-preprint.pdf">Submitted preprint (PDF)</a> · <a href="../assets/attention-paper-measurements.json">Measurements transcribed from §6 (JSON)</a> · <a href="../assets/attention-reproducibility.zip">Author’s reproducibility bundle</a></p>
+</section>

@@ -1,0 +1,40 @@
+<header class="mats-header">
+  <p class="mats-kicker">Experiment note · MARS</p>
+  <h1>Cooperation, incentives, and downside risk</h1>
+  <p class="mats-meta">Pranav Venkata Konda · Working draft dated 6 October 2026</p>
+</header>
+<p class="mats-note-evidence"><strong>Status.</strong> Experiments reported in the in-progress preprint <a href="../assets/mars-working-preprint.pdf">What Can Cooperative Agents Forget?</a>, §6. Preparing this note did not reproduce inference or independently review the theory. The draft is the source for the reported numbers.</p>
+<section>
+  <h2>Design</h2>
+  <p>The main studies use a pinned Qwen3-8B checkpoint in BF16 on H100 hardware, with native reasoning enabled. A Qwen3-14B follow-up repeats the stage-incentive intervention. The model writes bounded program sources before commitment. A finite interpreter admits constants, source variables, Boolean operations, and conditional expressions; it excludes arbitrary execution, imports, loops, and function calls.</p>
+  <p>Every source pair’s quotation and delivery law is evaluated using exact rational probabilities. Tested source deviations receive their authentic new quotation. Each paired study has six population seed blocks and three writer positions per role. Revisions are synchronous; invalid revisions retain the incumbent rather than being repaired until valid.</p>
+  <p>Measurements distinguish high cooperation, low coordination, finite-pool deviation gain, and downside against withheld sources. The population seed is the independent unit. Cross-play pairs and outcome atoms within a population are not independent replications. The draft describes thirteen main studies and a separate delegation pilot; studies with different horizons are not pooled.</p>
+</section>
+<section>
+  <h2>Incentive interventions</h2>
+  <div class="mats-table-wrap"><table>
+    <caption>Endpoint means over six paired populations per comparison (draft Table 1)</caption>
+    <thead><tr><th scope="col">Condition</th><th scope="col">High cooperation</th><th scope="col">Low coordination</th><th scope="col">Finite deviation gain</th></tr></thead>
+    <tbody>
+      <tr><td>Neutral resampling, generation 6</td><td>0.111</td><td>0.426</td><td>0.694</td></tr>
+      <tr><td>Fitness resampling, generation 6</td><td>0.000</td><td>0.944</td><td>0.056</td></tr>
+      <tr><td>Original payoffs, 8B, generation 4</td><td>0.148</td><td>0.481</td><td>0.667</td></tr>
+      <tr><td>Reduced temptation, 8B, generation 4</td><td>0.708</td><td>0.000</td><td>0.456</td></tr>
+      <tr><td>Original payoffs, 14B, generation 4</td><td>0.046</td><td>0.537</td><td>0.442</td></tr>
+      <tr><td>Reduced temptation, 14B, generation 4</td><td>0.338</td><td>0.208</td><td>0.597</td></tr>
+    </tbody>
+  </table></div>
+  <p>Fitness weighting increases low coordination and reduces tested deviation gain in every paired seed of the resampling control. It also eliminates high cooperation at the endpoint. A separate intervention lowers exploiting payoffs while retaining the high-cooperation outcome; cooperation rises at both model sizes, while the direction of finite deviation gain differs between them.</p>
+  <p>The payoff intervention changes the strategic problem. It does not establish secure partner recognition in the original game. Worst sealed downside remains one in every population in the table, meaning that each population contains at least one writer–opponent pair with certain downside. It does not mean that every writer is certainly harmed.</p>
+</section>
+<section>
+  <h2>Average compliance and uniform protection</h2>
+  <p>The risk-objective study instructs one arm to maximize payoff subject to a 5% downside cap against each of two training sources. Both arms receive exact risk feedback. At generation four, compliant writer positions increase from seven of 36 to 17 of 36, and average worst training risk falls from 0.8056 to 0.5278.</p>
+  <p>The primary endpoint nevertheless fails: the population’s maximum downside is one in every seed of both arms. No population has all six writers satisfying the cap. The individual improvement also appears against the draft’s disjoint finite evaluation families, but uniform protection already fails on training opponents. This distinction matters when a better average is used to support a claim about every agent.</p>
+</section>
+<section>
+  <h2>Fixed-source replay and limitations</h2>
+  <p>A delivery study compares shared and independent delivery with equal marginals. Replaying the same evolved sources under both channels separates the channel’s effect from differences in the sources produced during evolution. Of 108 cross-role pairs, 100 have identical complete outcome laws and eight are sensitive to the coupling. The fixed-source and between-population comparisons can have different directions.</p>
+  <p>Finite deviation gain is a lower bound on unrestricted profitable deviation. Zero in a tested pool does not certify unrestricted equilibrium. The experiments concern small populations, bounded sources, and finite adversarial families. They do not test whether the model learns the theoretical guarantee-preserving quotient or satisfies the repeated construction’s assumptions.</p>
+  <p><a href="../assets/mars-working-preprint.pdf">Working preprint (PDF)</a> · <a href="../assets/mars-paper-measurements.json">Measurements transcribed from §6 and Table 1 (JSON)</a></p>
+</section>

@@ -1,0 +1,50 @@
+{
+  "evidence": "transcribed from submitted main-arxiv.pdf section 6",
+  "independently_replicated_here": false,
+  "scalar": {
+    "depth": 4,
+    "precision_digits": 110,
+    "scales": [
+      0.04,
+      0.02
+    ],
+    "predicted_contact_orders": [
+      1,
+      5,
+      17,
+      53
+    ],
+    "observed_slopes": [
+      0.999994,
+      5.002211,
+      17.001118,
+      53.000562
+    ],
+    "weakest_singular_value_at_0_02": 3.86e-92
+  },
+  "matrix": {
+    "tokens": 4,
+    "width": 4,
+    "depth": 3,
+    "query_key_rank": 2,
+    "input_bank_size": 48,
+    "jacobian_shape": [
+      768,
+      96
+    ],
+    "exact_rank": 52,
+    "float64_reported_rank": 40,
+    "relative_cutoff": 1e-10,
+    "high_precision_digits": 120
+  },
+  "recovery": {
+    "noise_sd_endpoints": [
+      1.57e-10,
+      1.57e-07
+    ],
+    "relative_rmse_endpoints": [
+      0.005,
+      1.31
+    ]
+  }
+}

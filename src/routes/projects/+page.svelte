@@ -11,6 +11,11 @@
 	</p>
 	<ul class='list-disc space-y-2 m-4'>
 		<li>
+			<ProjectLink src="/anthropic-mats/" title="Activation monitors under distribution shift">
+				A research direction for the Anthropic MATS stream, with preprints and experiment notes on monitoring, observability, and cooperative agents.
+			</ProjectLink>
+		</li>
+		<li>
 			<ProjectLink src="/dev-log" title="This site!">
 				Click here for a development log of this website and to see what sorts of changes have happened over time.
 			</ProjectLink>

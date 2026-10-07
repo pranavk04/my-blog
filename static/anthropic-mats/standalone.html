@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Activation monitors under distribution shift — research and experiment notes by Pranav Venkata Konda.">
+  <title>Activation monitors under distribution shift · Pranav Konda</title>
+  <link rel="stylesheet" href="./assets/page.css">
+  <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
+</head>
+<body><main><article class="mats-page">
+
+<header class="mats-header">
+  <p class="mats-kicker">Pranav Venkata Konda · Anthropic MATS</p>
+  <h1>Activation monitors under distribution shift</h1>
+  <p class="mats-deck">When do internal measurements distinguish unsafe behavior in unfamiliar situations?</p>
+  <p class="mats-meta">Research direction · Draft dated 7 October 2026</p>
+</header>
+
+<nav class="mats-contents" aria-label="On this page">
+  <a href="#question">Research question</a>
+  <a href="#experiments">Proposed experiments</a>
+  <a href="#work">Previous work</a>
+  <a href="#notes">Experiment notes</a>
+</nav>
+
+<section id="question">
+  <h2>Research question</h2>
+  <p>I am interested in when internal activations support reliable detection of unsafe behavior outside the conditions used to train a monitor. The relevant changes include unfamiliar tasks, interfaces, and violation mechanisms. A useful monitor must distinguish misconduct from authorized behavior under these changes, with an acceptable false-positive rate and without confusing reduced task competence with improved safety.</p>
+  <p>Anthropic’s <a href="https://www.anthropic.com/research/probes-catch-sleeper-agents">Simple probes can catch sleeper agents</a> demonstrates the promise of this approach. A probe fitted to a single contrastive question achieved an AUROC of 0.993 on a constructed sleeper-agent model, and related probes performed well across the tested sleeper models. The authors also identify a limitation: backdoor insertion may have produced an unusually salient linear feature. These results therefore motivate a transfer question about which internal distinctions remain useful when the source of unsafe behavior changes.</p>
+  <p><a href="https://alignment.anthropic.com/2025/honesty-elicitation/">Evaluating honesty and lie detection techniques on a diverse suite of dishonest models</a> provides a complementary test. In that study, simple prompting and fine-tuning were the strongest approaches overall; truth probing and honesty steering did not provide the strongest results. I want to understand when internal measurements add information beyond strong prompting and text-based monitoring, and what explains the cases in which they fail.</p>
+</section>
+
+<section id="experiments">
+  <h2>Proposed experiments</h2>
+  <p>I would begin with a bounded transfer experiment, then use its failures to choose representation and intervention tests. Task outcomes would be checked independently of the monitor. The initial setting would use tool-based tasks with explicit authorization and verifiable completion; broader tasks and interfaces would require separate evaluation blocks.</p>
+  <h3>1. Complementary failures at a fixed false-positive rate</h3>
+  <p>I would fit a small bank of probes using different examples and contrastive supervision, then hold out an entire mechanism that elicits violations. All examples derived from a task instance would remain in the same split. Probe selection, score orientation, combination rules, and thresholds would be fixed before evaluating the held-out mechanism.</p>
+  <p>The primary comparison would be detection at a fixed false-positive budget for the complete monitoring system, with inference cost reported alongside it. I would compare the best single probe, a development-selected combination, and strong text/context monitors. Shared misses and cases rescued by another probe would indicate whether the bank supplies complementary information. AUROC would be a secondary description; additional probes would be useful only if their gain survives calibration of the whole bank.</p>
+  <h3>2. Features that survive changes in authorization and presentation</h3>
+  <p>I would next ask which distinctions account for successful transfer. Matched authorization changes would make the same action permitted in one context and prohibited in another. Separate presentation changes would preserve its parsed meaning while changing wording, formatting, or interface labels. Together, these controls would test whether a feature tracks the relation between an action and its authorization, or instead responds to surface cues.</p>
+  <p>Where a candidate feature predicts outcomes on fresh cases, controlled activation interventions could test its role in the model’s behavior. Such tests would include matched donor and random controls and would measure the subsequent action. Predictive association alone would not establish that the feature causes the behavior.</p>
+  <h3>3. Prompting, verified behavior, and monitor scores</h3>
+  <p>I would compare prompting conditions on matched task instances while keeping the detector fixed. The outcomes would be verified violations, legitimate task success, invalid calls, and detector scores. A lower score without fewer verified violations would expose a monitoring failure. Fewer violations would support a behavioral effect only if legitimate competence remains adequate; explaining that effect through an internal feature would require a separate causal test.</p>
+  <h3>Geometric questions</h3>
+  <p>My mathematical background suggests studying the observation map from internal state to monitor measurements: which behaviorally relevant distinctions does it preserve, and how sensitively does it detect them? Near-equal measurements can reflect either discarded information or weak sensitivity of a particular reader. I would use geometric diagnostics to propose additional measurements and interventions, then test their predictions on held-out behavior. Connections to latent-space topology remain a possible extension; a visualization or finite attack search would not establish a safe region or a topological separation.</p>
+  <p class="mats-linkline"><a href="./notes/proposed-study.html">Detailed study note</a> · <a href="https://pranavkonda.com/ant-mats-supplement/">Earlier supplement</a> · <a href="./assets/activation-monitor-generalization-note.pdf">Original research note (PDF)</a></p>
+</section>
+
+<section id="work">
+  <h2>Previous work</h2>
+  <p>These projects concern which distinctions can be recovered from observations, which can be discarded without changing useful decisions, and how internal measurements relate to behavior.</p>
+  <article class="mats-work">
+    <p class="mats-status">Completed manuscript · Submitted to arXiv; processing</p>
+    <h3>Identifiability and Observability of Deep Normalized Attention</h3>
+    <p>I study which parameters of deep, unmasked, single-head attention are determined by its input–output function. For known positive nonconstant real-analytic normalizers, the paper establishes generic identification of the effective scores and combined value map, up to signs induced by even normalizers. It then classifies exceptional fibers under explicit conditions and quantifies the loss of numerical sensitivity near collapse. The distinction between exact identification and reliable recovery motivates my interest in what a monitor’s observations can establish.</p>
+    <p class="mats-linkline"><a href="./assets/attention-identifiability-preprint.pdf">Read the preprint</a> · <a href="./notes/attention-observability.html">Numerical experiment note</a></p>
+  </article>
+  <article class="mats-work">
+    <p class="mats-status">MARS · Preprint in progress</p>
+    <h3>What Can Cooperative Agents Forget?</h3>
+    <p>This project studies information compression in finite program games with authentic committed sources. It asks when agents can discard distinctions about their partners while preserving specified cooperative guarantees. The draft combines exact and robust decision criteria with experiments on Qwen3-written programs. Those experiments measure cooperation, finite deviation gain, and downside risk separately: increased cooperation or better average compliance need not provide uniform protection.</p>
+    <p class="mats-linkline"><a href="./assets/mars-working-preprint.pdf">Read the working draft</a> · <a href="./notes/mars-experiments.html">Population experiment note</a></p>
+  </article>
+  <article class="mats-work">
+    <p class="mats-status">Public arXiv preprint · June 2026</p>
+    <h3>Transformers Learn the Mestre–Nagao Heuristic</h3>
+    <p>I trained a small transformer to classify rational elliptic curves of rank zero or one from Frobenius traces, then studied the computation using probes, activation patching, and circuit analysis. The paper reports a close match between a discriminating neuron’s input weights and the Mestre–Nagao heuristic. It also distinguishes predictive activation information from attention weights and causal information flow.</p>
+    <p class="mats-linkline"><a href="https://arxiv.org/abs/2606.15036">arXiv:2606.15036</a></p>
+  </article>
+</section>
+
+<section id="notes">
+  <h2>Experiment notes</h2>
+  <p>My earlier small-model monitor study supplies a concrete transfer failure. The development-selected detector separated constructed candidate actions perfectly, but its AUROC fell to 0.590 on arithmetic stress actions and 0.525 on inventory stress actions. Only six of 96 stress episodes contained verified violations, including one positive inventory task instance. These results motivate a better controlled experiment; they do not establish a general limit of activation monitoring.</p>
+  <div class="mats-table-wrap">
+    <table>
+      <caption>Completed measurements and the next proposed study</caption>
+      <thead><tr><th scope="col">Note</th><th scope="col">Evidence and status</th></tr></thead>
+      <tbody>
+        <tr><td><a href="./notes/monitor-transfer.html">Constructed actions and natural stress behavior</a></td><td>Completed local pilot; transfer failure and limited event coverage.</td></tr>
+        <tr><td><a href="./notes/authorization-presentation.html">Authorization, formatting, and competence controls</a></td><td>Completed exploratory controls; sensitivity and competence limitations.</td></tr>
+        <tr><td><a href="./notes/mars-experiments.html">MARS population experiments</a></td><td>Experiments reported in the working draft; finite games and small paired populations.</td></tr>
+        <tr><td><a href="./notes/attention-observability.html">Numerical sensitivity in normalized attention</a></td><td>Numerical checks accompanying the submitted manuscript.</td></tr>
+        <tr><td><a href="./notes/proposed-study.html">A mechanism-held-out monitor study</a></td><td>Proposed follow-up; no new model runs reported.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="mats-small">The notes link to papers and saved numerical summaries. They distinguish manuscript-reported results, exploratory analyses, and proposed work.</p>
+</section>
+
+<footer class="mats-footer">
+  <p><a href="https://pranavkonda.com/contact">Contact</a> · <a href="https://pranavkonda.com/projects">Other projects</a></p>
+</footer>
+
+</article></main></body>
+</html>

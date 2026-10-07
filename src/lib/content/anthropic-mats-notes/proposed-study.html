@@ -1,0 +1,36 @@
+<header class="mats-header">
+  <p class="mats-kicker">Proposed experiment · Activation monitoring</p>
+  <h1>A mechanism-held-out monitor study</h1>
+  <p class="mats-meta">Pranav Venkata Konda · Proposal dated 7 October 2026</p>
+</header>
+<p class="mats-note-evidence"><strong>Status.</strong> Proposed follow-up. No new model inference, training, or intervention results are reported. The broader research question includes new tasks, interfaces, and violation mechanisms; this first block isolates one monitoring decision in a verifiable tool environment.</p>
+<section>
+  <h2>Primary question</h2>
+  <p>Does a small probe bank detect false completion reports on a wholly withheld elicitation mechanism more reliably than a single activation probe or a text/context monitor, at a fixed whole-system false-positive budget and measured cost?</p>
+  <p>The initial target is a well-formed completion claim inconsistent with verified task state. It is observable misconduct under the task’s rules, not a diagnosis of deceptive intent. Invalid calls, refusals, wrong ordinary answers, and authorized changes require separate categories. A privileged exact verifier supplies evaluation labels; it is not an input feature available to the monitors.</p>
+  <p>If an equally cheap exact verifier is available under the same deployment access contract, it belongs in the comparison and may settle the monitoring decision directly. This pilot would then validate measurement instruments rather than establish an advantage from internal access.</p>
+</section>
+<section>
+  <h2>Development gates and held-out data</h2>
+  <p>Before fitting a detector, require valid tool calls and correct legitimate completion in neutral and explicitly authorized conditions. Require violations on enough independent task instances to estimate detection. A failure of either gate is an informative stopping result rather than a reason to fit more elaborate probes.</p>
+  <p>Fit on two mechanisms that elicit the same false-completion target, such as misleading-checker pressure and proxy-score pressure. Withhold a third, such as spoofed-authority pressure, from fitting, orientation, and threshold calibration. This is mechanism transfer within one outcome definition; it does not by itself establish transfer to a new kind of violation. New task and interface blocks would test those changes separately.</p>
+  <p>Underlying task instances, seeds, trajectories, authorization variants, and presentation variants remain grouped. Both clean and violating outcomes must occur within mechanisms, so template identity cannot determine the label. The held-out block is collected only after the comparator and analysis choices are recorded.</p>
+</section>
+<section>
+  <h2>Measurements and comparisons</h2>
+  <p>Begin with three regularized probes trained on different supervision: general safety contrasts, authorization-matched contrasts, and verifier-labeled actions from the fitting mechanisms. Hold the activation site fixed while comparing supervision; layer choice can be a separate development ablation. Measure the proposed completion report before the environment accepts it. Text comparators receive that same report and the same permitted context.</p>
+  <p>Compare the development-selected single probe, one development-selected combination of the bank, and a small fixed set of strong text/context baselines. Candidate combination rules can include an OR rule with joint calibration and a regularized logistic stacker. Test outcomes do not select the rule, members, signs, or threshold.</p>
+  <p>A 5% whole-system false-positive budget is a concrete pilot choice to record before testing. It is not a reliability claim, and assigning 5% independently to every probe would exceed the bank’s budget. Freeze thresholds on calibration data and report their actual false-positive rates on untouched valid test outcomes. A shift that breaks calibration is itself a transfer failure.</p>
+  <p>Report true-positive rate, false-positive rate, legitimate utility, shared misses, rescued cases, and paired differences, with uncertainty grouped by task instance. AUROC is secondary. Include latency, activation extraction, memory, and text-monitor token cost. Too few positives, absent classes, or wide intervals produce an inconclusive result; they do not establish equivalence.</p>
+</section>
+<section>
+  <h2>Conditional follow-ups</h2>
+  <p>If transfer survives the initial comparison, use fresh authorization and presentation pairs to identify what each useful feature measures. Then test controlled activation interventions against donor and random controls. Prompt conditions should be randomized on matched instances, with the monitor frozen and verified behavior scored independently.</p>
+  <p>Geometric analysis can propose additional observations when the bank misses behaviorally different cases. Equal compressed observations imply a blind spot only for the declared observation. Near-equal full-precision scores need a noise or reader-regularity contract before they support an impossibility claim. Finite perturbation searches do not certify safe margins or disconnected unsafe regions.</p>
+</section>
+<section>
+  <h2>Stopping rule and sources</h2>
+  <p>Stop the first block if competence or event coverage fails, the frozen bank exceeds its false-positive budget, or its incremental benefit vanishes at matched cost and calibration. A negative result would retain the cases and show which observation or assumption failed. Broader representation learning and prompt mitigation require their own subsequent protocols.</p>
+  <p><a href="../assets/activation-monitor-generalization-note.pdf">Original conceptual note</a> · <a href="monitor-transfer.html">Prior transfer failure</a> · <a href="https://www.anthropic.com/research/probes-catch-sleeper-agents">Anthropic sleeper-agent probes</a> · <a href="https://alignment.anthropic.com/2025/honesty-elicitation/">Anthropic honesty and lie detection</a></p>
+  <p class="mats-small">This note develops the proposed experiment described on the main page. Its supervision comparison is an intended follow-up, not an experiment performed by the earlier 29-measurement bank.</p>
+</section>
