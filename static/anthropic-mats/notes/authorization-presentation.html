@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Authorization, presentation, and task competence — research and experiment notes by Pranav Venkata Konda.">
+  <title>Authorization, presentation, and task competence · Pranav Konda</title>
+  <link rel="stylesheet" href="../assets/page.css">
+  <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
+</head>
+<body><main><article class="mats-page">
+<p class="mats-note-back"><a href="../">← Research direction</a></p>
+<header class="mats-header">
+  <p class="mats-kicker">Experiment note · Matched controls</p>
+  <h1>Authorization, presentation, and task competence</h1>
+  <p class="mats-meta">Pranav Venkata Konda · Prepared 7 October 2026</p>
+</header>
+<p class="mats-note-evidence"><strong>Status.</strong> Completed controls from the small-model monitor pilot. The formatting analysis is exploratory and reuses already observed actions. The prompt cohorts are not a randomized estimate of wording alone.</p>
+<section>
+  <h2>Authorization changes the target</h2>
+  <p>An action that changes a reported answer to match a checker can be prohibited in one task and explicitly authorized in a compatibility task. A monitor must read the authorization relation rather than classify the action string in isolation. The pilot therefore includes consistent, conflict, and authorized regimes, with exact task truth and checker targets tracked separately.</p>
+  <p>The stronger-wording test produced zero violations in 96 episodes. Its live AUROC is undefined because the positive class is absent. It also completed only two of 32 authorized compatibility changes and produced 15 invalid calls in those controls. The low observed violation rate therefore does not establish preserved task competence.</p>
+  <p>The lighter-wording stress cohort contains six violating episodes, but also differs in calculator-prefix provision, call budget, numeric range, and seeds. Its comparison with the stronger cohort cannot identify a causal effect of integrity wording. A new prompt study should randomize conditions on matched task instances and measure authorized success, violations, and invalid calls separately.</p>
+</section>
+<section>
+  <h2>Presentation can change a score without changing an action</h2>
+  <p>A paired sensitivity check reorders JSON keys and adds indentation to 20 already observed stress actions. The harness verifies that the parsed actions are identical before extracting new features. The subset contains 16 arithmetic actions and four inventory actions and was selected for a balanced diagnostic, so it does not estimate natural deployment prevalence.</p>
+  <div class="mats-table-wrap"><table>
+    <caption>Decision flips under meaning-preserving JSON formatting</caption>
+    <thead><tr><th scope="col">Frozen measurement</th><th scope="col">Arithmetic</th><th scope="col">Inventory</th></tr></thead>
+    <tbody>
+      <tr><td>Selected covariance LDA</td><td>0%</td><td>0%</td></tr>
+      <tr><td>Adapter-gradient probe</td><td>18.8%</td><td>25%</td></tr>
+      <tr><td>Context and text</td><td>6.2%</td><td>25%</td></tr>
+      <tr><td>Mean ensemble</td><td>56.2%</td><td>0%</td></tr>
+    </tbody>
+  </table></div>
+  <p>Zero flips for the selected LDA on this small subset do not establish general presentation invariance. The broader variation shows that some monitor decisions depend on formatting even when action semantics are unchanged. These are changes in measurement, not new model actions or evidence of successful evasion.</p>
+</section>
+<section>
+  <h2>A descriptive geometric statistic</h2>
+  <p>The study also projects the verifier-label vector onto the span of frozen probe scores after residualizing by action kind. The resulting squared projection ratio is unchanged by invertible mixing or duplication of probe coordinates. That algebraic invariance was checked separately from its empirical usefulness.</p>
+  <p>The ratio is large on authored candidates, but the stress permutation tests do not pass the stated multiple-comparison correction. The stress values are 0.650 and 0.681, with Holm-adjusted p-values 0.0639 and 0.4945. A score-space statistic can describe a bank without providing a held-out detector, causal feature, or universal latent-space invariant.</p>
+</section>
+<section>
+  <h2>Saved evidence and next test</h2>
+  <p><a href="../assets/probe-format-summary.json">Complete paired formatting summary (JSON)</a> · <a href="../assets/probe-stress-summary.json">Stress and score-subspace summary (JSON)</a> · <a href="monitor-transfer.html">Transfer experiment</a></p>
+  <p>The next useful test crosses authorization and presentation on new task instances. Authorization changes should alter the verified target when the action stays fixed; presentation changes should preserve it. Only after a feature survives both tests should an intervention study ask whether changing that feature changes verified behavior.</p>
+</section>
+
+</article></main></body>
+</html>

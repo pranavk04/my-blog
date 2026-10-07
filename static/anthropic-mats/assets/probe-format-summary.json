@@ -1,0 +1,309 @@
+{
+  "rows": 20,
+  "results": {
+    "arithmetic": {
+      "rows": 16,
+      "positives": 8,
+      "methods": {
+        "goodfire_frozen": {
+          "original_auroc": 0.703125,
+          "reformatted_auroc": 0.8125,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "difference_means": {
+          "original_auroc": 0.484375,
+          "reformatted_auroc": 0.515625,
+          "threshold_decision_flip_rate": 0.0625
+        },
+        "covariance_lda": {
+          "original_auroc": 0.953125,
+          "reformatted_auroc": 0.90625,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "linear_layer12": {
+          "original_auroc": 0.890625,
+          "reformatted_auroc": 0.5625,
+          "threshold_decision_flip_rate": 0.375
+        },
+        "linear_layer24": {
+          "original_auroc": 0.796875,
+          "reformatted_auroc": 0.953125,
+          "threshold_decision_flip_rate": 0.1875
+        },
+        "linear_layer32": {
+          "original_auroc": 0.875,
+          "reformatted_auroc": 0.84375,
+          "threshold_decision_flip_rate": 0.625
+        },
+        "sparse_l1": {
+          "original_auroc": 0.78125,
+          "reformatted_auroc": 0.84375,
+          "threshold_decision_flip_rate": 0.125
+        },
+        "pca_linear": {
+          "original_auroc": 0.78125,
+          "reformatted_auroc": 0.90625,
+          "threshold_decision_flip_rate": 0.5625
+        },
+        "rbf_kernel": {
+          "original_auroc": 0.640625,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "small_mlp": {
+          "original_auroc": 0.75,
+          "reformatted_auroc": 0.90625,
+          "threshold_decision_flip_rate": 0.5625
+        },
+        "last_token": {
+          "original_auroc": 0.546875,
+          "reformatted_auroc": 0.78125,
+          "threshold_decision_flip_rate": 0.1875
+        },
+        "multilayer": {
+          "original_auroc": 0.84375,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.375
+        },
+        "pre_action": {
+          "original_auroc": 0.625,
+          "reformatted_auroc": 0.625,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "temporal_delta": {
+          "original_auroc": 0.65625,
+          "reformatted_auroc": 0.890625,
+          "threshold_decision_flip_rate": 0.4375
+        },
+        "token_dispersion": {
+          "original_auroc": 0.875,
+          "reformatted_auroc": 0.875,
+          "threshold_decision_flip_rate": 0.125
+        },
+        "cross_layer_increment": {
+          "original_auroc": 0.828125,
+          "reformatted_auroc": 0.984375,
+          "threshold_decision_flip_rate": 0.375
+        },
+        "adapter_gradient": {
+          "original_auroc": 0.53125,
+          "reformatted_auroc": 0.34375,
+          "threshold_decision_flip_rate": 0.1875
+        },
+        "gradient_centroids": {
+          "original_auroc": 0.8125,
+          "reformatted_auroc": 0.1875,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "likelihood_statistics": {
+          "original_auroc": 0.53125,
+          "reformatted_auroc": 0.40625,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "action_residualized": {
+          "original_auroc": 0.9375,
+          "reformatted_auroc": 0.609375,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "paired_contrast_pca": {
+          "original_auroc": 0.890625,
+          "reformatted_auroc": 0.9375,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "class_density": {
+          "original_auroc": 0.78125,
+          "reformatted_auroc": 0.984375,
+          "threshold_decision_flip_rate": 0.5
+        },
+        "response_text": {
+          "original_auroc": 0.625,
+          "reformatted_auroc": 0.6875,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "context_and_text": {
+          "original_auroc": 0.859375,
+          "reformatted_auroc": 0.890625,
+          "threshold_decision_flip_rate": 0.0625
+        },
+        "nuisance_only": {
+          "original_auroc": 0.9609375,
+          "reformatted_auroc": 0.9609375,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "permuted_label_control": {
+          "original_auroc": 0.390625,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "random_direction": {
+          "original_auroc": 0.5,
+          "reformatted_auroc": 0.96875,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "mean_ensemble": {
+          "original_auroc": 0.828125,
+          "reformatted_auroc": 0.953125,
+          "threshold_decision_flip_rate": 0.5625
+        },
+        "pca_consensus": {
+          "original_auroc": 0.796875,
+          "reformatted_auroc": 0.9375,
+          "threshold_decision_flip_rate": 0.5625
+        }
+      }
+    },
+    "inventory": {
+      "rows": 4,
+      "positives": 2,
+      "methods": {
+        "goodfire_frozen": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "difference_means": {
+          "original_auroc": 1.0,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "covariance_lda": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "linear_layer12": {
+          "original_auroc": 0.75,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "linear_layer24": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "linear_layer32": {
+          "original_auroc": 0.75,
+          "reformatted_auroc": 0.5,
+          "threshold_decision_flip_rate": 1.0
+        },
+        "sparse_l1": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "pca_linear": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "rbf_kernel": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.5,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "small_mlp": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "last_token": {
+          "original_auroc": 0.5,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "multilayer": {
+          "original_auroc": 0.5,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "pre_action": {
+          "original_auroc": 0.5,
+          "reformatted_auroc": 0.5,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "temporal_delta": {
+          "original_auroc": 0.5,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "token_dispersion": {
+          "original_auroc": 1.0,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "cross_layer_increment": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.5,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "adapter_gradient": {
+          "original_auroc": 0.25,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "gradient_centroids": {
+          "original_auroc": 0.25,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "likelihood_statistics": {
+          "original_auroc": 0.75,
+          "reformatted_auroc": 0.75,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "action_residualized": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "paired_contrast_pca": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "class_density": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "response_text": {
+          "original_auroc": 1.0,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "context_and_text": {
+          "original_auroc": 1.0,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "nuisance_only": {
+          "original_auroc": 1.0,
+          "reformatted_auroc": 1.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "permuted_label_control": {
+          "original_auroc": 0.25,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.25
+        },
+        "random_direction": {
+          "original_auroc": 0.5,
+          "reformatted_auroc": 0.5,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "mean_ensemble": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.0,
+          "threshold_decision_flip_rate": 0.0
+        },
+        "pca_consensus": {
+          "original_auroc": 0.0,
+          "reformatted_auroc": 0.25,
+          "threshold_decision_flip_rate": 0.25
+        }
+      }
+    }
+  },
+  "semantics_verified": true,
+  "warning": "Selected balanced subset of spent stress rows; paired sensitivity only. No refit or threshold adjustment."
+}

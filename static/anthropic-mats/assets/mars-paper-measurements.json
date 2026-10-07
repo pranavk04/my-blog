@@ -1,0 +1,62 @@
+{
+  "evidence": "transcribed from sample_paper.pdf section 6 and Table 1, draft dated 6 October 2026",
+  "independently_replicated_here": false,
+  "paired_population_seeds": 6,
+  "table_1": [
+    {
+      "condition": "neutral_resampling",
+      "generations": 6,
+      "high_cooperation": 0.111,
+      "low_coordination": 0.426,
+      "finite_deviation_gain": 0.694
+    },
+    {
+      "condition": "fitness_resampling",
+      "generations": 6,
+      "high_cooperation": 0,
+      "low_coordination": 0.944,
+      "finite_deviation_gain": 0.056
+    },
+    {
+      "condition": "original_payoffs_8b",
+      "generations": 4,
+      "high_cooperation": 0.148,
+      "low_coordination": 0.481,
+      "finite_deviation_gain": 0.667
+    },
+    {
+      "condition": "reduced_temptation_8b",
+      "generations": 4,
+      "high_cooperation": 0.708,
+      "low_coordination": 0,
+      "finite_deviation_gain": 0.456
+    },
+    {
+      "condition": "original_payoffs_14b",
+      "generations": 4,
+      "high_cooperation": 0.046,
+      "low_coordination": 0.537,
+      "finite_deviation_gain": 0.442
+    },
+    {
+      "condition": "reduced_temptation_14b",
+      "generations": 4,
+      "high_cooperation": 0.338,
+      "low_coordination": 0.208,
+      "finite_deviation_gain": 0.597
+    }
+  ],
+  "risk_objective": {
+    "baseline_compliant_writer_positions": 7,
+    "instructed_compliant_writer_positions": 17,
+    "total_positions_per_arm": 36,
+    "baseline_mean_worst_training_risk": 0.8056,
+    "instructed_mean_worst_training_risk": 0.5278,
+    "population_maximum_risk_all_seeds_both_arms": 1
+  },
+  "source_delivery_replay": {
+    "cross_role_source_pairs": 108,
+    "identical_laws": 100,
+    "sensitive_to_coupling": 8
+  }
+}

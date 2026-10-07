@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import RemarkMath from 'remark-math';
@@ -20,10 +20,11 @@ const config = {
 		}),
 	],
 	kit: {
-		adapter: adapter({ strict: false })
+		// All routes are prerendered by the root layout. An explicit supported
+		// fallback runtime avoids this Kit 1 adapter's retired Node 16/18 default.
+		adapter: adapter({ runtime: 'edge' })
 	}
 };
 
 export default config;
-
 
