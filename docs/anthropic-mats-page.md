@@ -4,6 +4,8 @@ The native SvelteKit route is `/anthropic-mats/`. It imports `AnthropicMats.svel
 
 The page is linked from `/projects`. Its relative paper and note links depend on the route's `trailingSlash = 'always'` setting. Static resources live in `static/anthropic-mats/`.
 
+The earlier `/ant-mats-supplement/` URL is preserved with a short page linking the original research-note PDF and the updated direction. This route was absent from the prior SvelteKit production checkout.
+
 ## Deployment compatibility
 
 The Vercel project rejected its discontinued Node 20 setting before building. The repository now requests Node 24 through `package.json` and pins the Kit 1-compatible Vercel adapter at 2.4.3. The root layout requests prerendering. An explicit Edge runtime avoids this adapter's retired Node 16/18 default. The verified build emits the new page, notes, and assets statically, alongside the adapter's Edge fallback function. Use Node 24 for installation and deployment checks.
