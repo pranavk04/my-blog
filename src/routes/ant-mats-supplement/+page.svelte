@@ -1,1 +1,1 @@
-<!-- The load function redirects this route to the main MATS page. -->
+<!-- Legacy address: the load function redirects to the public research page. -->

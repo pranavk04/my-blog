@@ -1,0 +1,60 @@
+.activation-page {
+  --activation-ink: #242925;
+  --activation-muted: #5e635e;
+  --activation-rule: #dce1da;
+  --activation-accent: #315d50;
+  color: var(--activation-ink);
+  font-family: Alegreya, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  max-width: 70ch;
+  margin: 1.5rem auto;
+  overflow-wrap: anywhere;
+}
+.activation-page * { box-sizing: border-box; }
+.activation-page a { color: var(--activation-accent); text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+.activation-page a:hover { text-decoration-thickness: 2px; }
+.activation-page a:focus-visible { outline: 2px solid var(--activation-accent); outline-offset: 4px; border-radius: 2px; }
+.activation-page .activation-kicker, .activation-page .activation-meta, .activation-page .activation-status, .activation-page .activation-contents, .activation-page .activation-small, .activation-page .activation-footer {
+  font-family: "Alegreya Sans", system-ui, sans-serif;
+}
+.activation-page .activation-kicker { font-size: .78rem; letter-spacing: .11em; text-transform: uppercase; color: var(--activation-accent); margin: 0 0 1.05rem; }
+.activation-page h1 { font-family: Alegreya, "Palatino Linotype", Palatino, Georgia, serif; font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 500; letter-spacing: -.025em; line-height: 1.13; margin: 0 0 1.05rem; color: var(--activation-ink); text-align: left; }
+.activation-page .activation-deck { font-size: 1.26rem; line-height: 1.5; max-width: 48ch; margin: 0 0 1rem; }
+.activation-page .activation-meta { font-size: .83rem; color: var(--activation-muted); margin: 0; }
+.activation-page .activation-contents { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font-size: .86rem; border-top: 1px solid var(--activation-rule); border-bottom: 1px solid var(--activation-rule); padding: .9rem 0; margin: 1.6rem 0 2.4rem; }
+.activation-page section { margin: 2.4rem 0; scroll-margin-top: 1rem; }
+.activation-page h2 { font-size: 1.62rem; font-weight: 600; line-height: 1.3; margin: 0 0 1rem; letter-spacing: -.012em; }
+.activation-page h3 { font-size: 1.22rem; font-weight: 600; line-height: 1.4; margin: 1.6rem 0 .6rem; }
+.activation-page p { margin: 0 0 1rem; }
+.activation-page .activation-linkline { font-size: .95rem; line-height: 1.7; }
+.activation-page .activation-work { padding: .15rem 0 .3rem 1.1rem; border-left: 2px solid var(--activation-rule); margin: 1.7rem 0; }
+.activation-page .activation-status { font-size: .79rem; color: var(--activation-muted); margin: 0 0 .4rem; }
+.activation-page .activation-work h3 { margin: .2rem 0 .7rem; font-size: 1.35rem; }
+.activation-page .activation-table-wrap { overflow-x: auto; margin: 1.6rem 0 1rem; }
+.activation-page table { width: 100%; border-collapse: collapse; font-size: .98rem; line-height: 1.5; }
+.activation-page caption { text-align: left; font-style: italic; color: var(--activation-muted); padding-bottom: .75rem; }
+.activation-page th, .activation-page td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--activation-rule); padding: .8rem .6rem .8rem 0; }
+.activation-page th { font-weight: 600; border-top: 1px solid var(--activation-rule); }
+.activation-page td:first-child { width: 48%; }
+.activation-page .activation-small { color: var(--activation-muted); font-size: .82rem; line-height: 1.6; }
+.activation-page .activation-footer { border-top: 1px solid var(--activation-rule); padding-top: 1.1rem; margin-top: 3rem; font-size: .85rem; }
+.activation-page .activation-note-back { margin: 0 0 1.5rem; font-family: system-ui, sans-serif; font-size: .85rem; }
+.activation-page .activation-note-evidence { background: #f3f5f1; border-left: 2px solid var(--activation-accent); padding: .75rem 1rem; font-size: .96rem; margin: 1.5rem 0; }
+.activation-page ul, .activation-page ol { padding-left: 1.4rem; margin: .9rem 0 1.2rem; }
+.activation-page li { margin-bottom: .5rem; }
+.activation-page code { font-size: .85em; }
+@media (max-width: 520px) {
+  .activation-page { font-size: 1.05rem; margin-top: 1rem; }
+  .activation-page .activation-deck { font-size: 1.14rem; }
+  .activation-page .activation-work { padding-left: .8rem; }
+  .activation-page th, .activation-page td { font-size: .91rem; }
+}
+@media print {
+  .activation-page { max-width: none; font-size: 11pt; color: #111; margin: 0; }
+  .activation-page .activation-contents, .activation-page .activation-note-back, .activation-page .activation-footer { display: none; }
+  .activation-page h1 { font-size: 25pt; }
+  .activation-page h2, .activation-page h3 { break-after: avoid; }
+  .activation-page tr, .activation-page .activation-work { break-inside: avoid; }
+  .activation-page a { color: inherit; }
+}
