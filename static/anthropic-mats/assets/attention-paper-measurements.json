@@ -1,5 +1,6 @@
 {
-  "evidence": "transcribed from submitted main-arxiv.pdf section 6",
+  "evidence": "transcribed from author-supplied main-arxiv.pdf section 6",
+  "paper_url": "https://arxiv.org/abs/2610.09620",
   "independently_replicated_here": false,
   "scalar": {
     "depth": 4,

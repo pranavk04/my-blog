@@ -1,8 +1,8 @@
 <h1 class="font-heading text-3xl md:text-5xl text-center font-black">Hi! I'm Pranav!</h1>
 
 	<p> 
-	Welcome to my site. You can find out about myself, 
-	my research, and my projects by using the links above.
+	Welcome to my site. My research papers and current work are collected on the
+	<a href="/projects" class="text-primary-400 hover:text-primary-300 underline">Projects page</a>.
 	To return to this page, click my name at the top on any page. 
 	If you'd like to contact me, you can use the link in the footer. 
 	</p>
