@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/review/:path*",
+      "source": "/review/(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
