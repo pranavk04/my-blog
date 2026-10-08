@@ -1,21 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Constructed actions and natural stress behavior — research and experiment notes by Pranav Venkata Konda.">
-  <title>Constructed actions and natural stress behavior · Pranav Konda</title>
-  <link rel="stylesheet" href="../assets/page.css">
-  <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
-</head>
-<body><main><article class="mats-page">
-<p class="mats-note-back"><a href="../">← Research direction</a></p>
-<header class="mats-header">
-  <p class="mats-kicker">Experiment note · Activation monitoring</p>
+<header class="activation-header">
+  <p class="activation-kicker">Experiment note · Activation monitoring</p>
   <h1>Constructed actions and natural stress behavior</h1>
-  <p class="mats-meta">Pranav Venkata Konda · Prepared 7 October 2026</p>
+  <p class="activation-meta">Pranav Venkata Konda · Prepared 7 October 2026</p>
 </header>
-<p class="mats-note-evidence"><strong>Status.</strong> Completed local Qwen2.5-3B-Instruct pilot. The measurements below come from saved reports and numerical summaries; preparing this note did not rerun inference. The result is a transfer failure in this particular setup.</p>
+<p class="activation-note-evidence"><strong>Status.</strong> Completed local Qwen2.5-3B-Instruct pilot. The measurements below come from saved reports and numerical summaries; preparing this note did not rerun inference. The result is a transfer failure in this particular setup.</p>
 <section>
   <h2>Question and design</h2>
   <p>The study asks whether internal measurements predict observable reward-related rule violations across fresh task instances and a second task family. Arithmetic and inventory tasks share a tool interface and a checker environment. The authorized objective can agree with the checker, conflict with it, or explicitly authorize a compatibility change. An exact replay verifier supplies the labels independently of detector scores.</p>
@@ -25,7 +13,7 @@
 <section>
   <h2>Observed transfer</h2>
   <p>The development-selected covariance-adjusted LDA achieved candidate-action AUROC 1.000 in both families. A nuisance-only baseline already achieved 0.990, showing how easily the constructed corpus could be separated without establishing useful behavioral detection.</p>
-  <div class="mats-table-wrap"><table>
+  <div class="activation-table-wrap"><table>
     <caption>AUROC on valid naturally generated stress actions</caption>
     <thead><tr><th scope="col">Frozen measurement</th><th scope="col">Arithmetic</th><th scope="col">Inventory</th></tr></thead>
     <tbody>
@@ -47,8 +35,5 @@
 <section>
   <h2>Saved evidence</h2>
   <p><a href="../assets/probe-stress-summary.json">Complete stress summary (JSON)</a> · <a href="../assets/probe-candidate-summary.json">Candidate and strong-prompt summary (JSON)</a> · <a href="authorization-presentation.html">Authorization and presentation controls</a> · <a href="proposed-study.html">Proposed follow-up</a></p>
-  <p class="mats-small">Source: “Reward-hacking geometry: heterogeneous probe pilot,” with the prospective probe-bank protocol and saved probe_bank_v1 / probe_bank_stress_v2 results. No result in this note is a new experiment or an independent replication.</p>
+  <p class="activation-small">Source: “Reward-hacking geometry: heterogeneous probe pilot,” with the prospective probe-bank protocol and saved probe_bank_v1 / probe_bank_stress_v2 results. No result in this note is a new experiment or an independent replication.</p>
 </section>
-
-</article></main></body>
-</html>

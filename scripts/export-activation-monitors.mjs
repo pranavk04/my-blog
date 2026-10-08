@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const staticDir = path.join(root, 'static/anthropic-mats');
+const staticDir = path.join(root, 'static/activation-monitors');
 const sourceDir = path.join(root, 'src/lib/content');
 const notes = ['monitor-transfer', 'authorization-presentation', 'mars-experiments', 'attention-observability', 'proposed-study'];
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
@@ -17,8 +17,8 @@ const wrapper = (title, body, cssPath, back = false) => `<!doctype html>
   <link rel="stylesheet" href="${cssPath}">
   <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
 </head>
-<body><main><article class="mats-page">
-${back ? '<p class="mats-note-back"><a href="../">← Research direction</a></p>' : ''}
+<body><main><article class="activation-page">
+${back ? '<p class="activation-note-back"><a href="../">← Research direction</a></p>' : ''}
 ${body}
 </article></main></body>
 </html>
@@ -26,12 +26,12 @@ ${body}
 
 await mkdir(path.join(staticDir, 'notes'), { recursive: true });
 await mkdir(path.join(staticDir, 'assets'), { recursive: true });
-await cp(path.join(root, 'src/lib/styles/anthropic-mats.css'), path.join(staticDir, 'assets/page.css'));
-const main = await readFile(path.join(sourceDir, 'anthropic-mats.html'), 'utf8');
+await cp(path.join(root, 'src/lib/styles/activation-monitors.css'), path.join(staticDir, 'assets/page.css'));
+const main = await readFile(path.join(sourceDir, 'activation-monitors.html'), 'utf8');
 const document = wrapper('Activation monitors under distribution shift', main, './assets/page.css');
 await writeFile(path.join(staticDir, 'standalone.html'), document);
 for (const slug of notes) {
-  const body = await readFile(path.join(sourceDir, 'anthropic-mats-notes', `${slug}.html`), 'utf8');
+  const body = await readFile(path.join(sourceDir, 'activation-monitor-notes', `${slug}.html`), 'utf8');
   const title = body.match(/<h1>([^<]+)<\/h1>/)?.[1];
   if (!title) throw new Error(`Missing note title: ${slug}`);
   await writeFile(path.join(staticDir, 'notes', `${slug}.html`), wrapper(title, body, '../assets/page.css', true));

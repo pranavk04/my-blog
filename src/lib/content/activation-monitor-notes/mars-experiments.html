@@ -1,21 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cooperation, incentives, and downside risk — research and experiment notes by Pranav Venkata Konda.">
-  <title>Cooperation, incentives, and downside risk · Pranav Konda</title>
-  <link rel="stylesheet" href="../assets/page.css">
-  <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
-</head>
-<body><main><article class="mats-page">
-<p class="mats-note-back"><a href="../">← Research direction</a></p>
-<header class="mats-header">
-  <p class="mats-kicker">Experiment note · MARS</p>
+<header class="activation-header">
+  <p class="activation-kicker">Experiment note · MARS</p>
   <h1>Cooperation, incentives, and downside risk</h1>
-  <p class="mats-meta">Pranav Venkata Konda · Working draft dated 6 October 2026</p>
+  <p class="activation-meta">Pranav Venkata Konda · Working draft dated 6 October 2026</p>
 </header>
-<p class="mats-note-evidence"><strong>Status.</strong> Experiments reported in the in-progress preprint <a href="../assets/mars-working-preprint.pdf">What Can Cooperative Agents Forget?</a>, §6. Preparing this note did not reproduce inference or independently review the theory. The draft is the source for the reported numbers.</p>
+<p class="activation-note-evidence"><strong>Status.</strong> Experiments reported in the in-progress preprint <a href="../assets/mars-working-preprint.pdf">What Can Cooperative Agents Forget?</a>, §6. Preparing this note did not reproduce inference or independently review the theory. The draft is the source for the reported numbers.</p>
 <section>
   <h2>Design</h2>
   <p>The main studies use a pinned Qwen3-8B checkpoint in BF16 on H100 hardware, with native reasoning enabled. A Qwen3-14B follow-up repeats the stage-incentive intervention. The model writes bounded program sources before commitment. A finite interpreter admits constants, source variables, Boolean operations, and conditional expressions; it excludes arbitrary execution, imports, loops, and function calls.</p>
@@ -24,7 +12,7 @@
 </section>
 <section>
   <h2>Incentive interventions</h2>
-  <div class="mats-table-wrap"><table>
+  <div class="activation-table-wrap"><table>
     <caption>Endpoint means over six paired populations per comparison (draft Table 1)</caption>
     <thead><tr><th scope="col">Condition</th><th scope="col">High cooperation</th><th scope="col">Low coordination</th><th scope="col">Finite deviation gain</th></tr></thead>
     <tbody>
@@ -50,6 +38,3 @@
   <p>Finite deviation gain is a lower bound on unrestricted profitable deviation. Zero in a tested pool does not certify unrestricted equilibrium. The experiments concern small populations, bounded sources, and finite adversarial families. They do not test whether the model learns the theoretical guarantee-preserving quotient or satisfies the repeated construction’s assumptions.</p>
   <p><a href="../assets/mars-working-preprint.pdf">Working preprint (PDF)</a> · <a href="../assets/mars-paper-measurements.json">Measurements transcribed from §6 and Table 1 (JSON)</a></p>
 </section>
-
-</article></main></body>
-</html>

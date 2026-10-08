@@ -1,21 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Exact identification and numerical sensitivity — research and experiment notes by Pranav Venkata Konda.">
-  <title>Exact identification and numerical sensitivity · Pranav Konda</title>
-  <link rel="stylesheet" href="../assets/page.css">
-  <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
-</head>
-<body><main><article class="mats-page">
-<p class="mats-note-back"><a href="../">← Research direction</a></p>
-<header class="mats-header">
-  <p class="mats-kicker">Experiment note · Normalized attention</p>
+<header class="activation-header">
+  <p class="activation-kicker">Experiment note · Normalized attention</p>
   <h1>Exact identification and numerical sensitivity</h1>
-  <p class="mats-meta">Pranav Venkata Konda · Public preprint, arXiv:2610.09620</p>
+  <p class="activation-meta">Pranav Venkata Konda · Public preprint, arXiv:2610.09620</p>
 </header>
-<p class="mats-note-evidence"><strong>Status.</strong> Numerical evidence accompanying <a href="https://arxiv.org/abs/2610.09620">The Identifiability and Observability of Deep Normalized Attention</a>, §6 and Appendix F. These are calculations in the declared attention family; they are not experiments on pretrained safety monitors.</p>
+<p class="activation-note-evidence"><strong>Status.</strong> Numerical evidence accompanying <a href="https://arxiv.org/abs/2610.09620">The Identifiability and Observability of Deep Normalized Attention</a>, §6 and Appendix F. These are calculations in the declared attention family; they are not experiments on pretrained safety monitors.</p>
 <section>
   <h2>What is observed</h2>
   <p>The paper studies deep, unmasked, single-head attention with known positive nonconstant real-analytic normalizers. The observation is the network’s input–output function, with finite input banks used for sensitivity measurements. Effective scores and the combined value map remove native factorization gauges.</p>
@@ -37,6 +25,3 @@
   <p>The experiment isolates one known observation problem. It does not measure general network reconstruction or training performance. Its relevance to monitoring is a question to test: whether a small measured change reflects a stable behavioral equivalence or weak sensitivity under the monitor’s actual inputs and noise level.</p>
   <p><a href="https://arxiv.org/abs/2610.09620">arXiv:2610.09620</a> · <a href="../assets/attention-identifiability-preprint.pdf">Author’s PDF</a> · <a href="../assets/attention-paper-measurements.json">Measurements transcribed from §6 (JSON)</a> · <a href="../assets/attention-reproducibility.zip">Author’s reproducibility bundle</a></p>
 </section>
-
-</article></main></body>
-</html>

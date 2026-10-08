@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="./assets/page.css">
   <style>body { margin: 0; padding: clamp(1.2rem, 4vw, 3.5rem); background: #fffefb; } main { display: block; }</style>
 </head>
-<body><main><article class="mats-page">
+<body><main><article class="activation-page">
 
-<header class="mats-header">
-  <p class="mats-kicker">Pranav Venkata Konda · Anthropic MATS</p>
+<header class="activation-header">
+  <p class="activation-kicker">Pranav Venkata Konda · Research direction</p>
   <h1>Activation monitors under distribution shift</h1>
-  <p class="mats-deck">When do internal measurements distinguish unsafe behavior in unfamiliar situations?</p>
-  <p class="mats-meta">Research direction · Draft dated 7 October 2026</p>
+  <p class="activation-deck">When do internal measurements distinguish unsafe behavior in unfamiliar situations?</p>
+  <p class="activation-meta">Research direction · Draft dated 7 October 2026</p>
 </header>
 
-<nav class="mats-contents" aria-label="On this page">
+<nav class="activation-contents" aria-label="On this page">
   <a href="#question">Research question</a>
   <a href="#experiments">Proposed experiments</a>
   <a href="#work">Previous work</a>
@@ -44,36 +44,36 @@
   <p>I would compare prompting conditions on matched task instances while keeping the detector fixed. The outcomes would be verified violations, legitimate task success, invalid calls, and detector scores. A lower score without fewer verified violations would expose a monitoring failure. Fewer violations would support a behavioral effect only if legitimate competence remains adequate; explaining that effect through an internal feature would require a separate causal test.</p>
   <h3>Geometric questions</h3>
   <p>My mathematical background suggests studying the observation map from internal state to monitor measurements: which behaviorally relevant distinctions does it preserve, and how sensitively does it detect them? Near-equal measurements can reflect either discarded information or weak sensitivity of a particular reader. I would use geometric diagnostics to propose additional measurements and interventions, then test their predictions on held-out behavior. Connections to latent-space topology remain a possible extension; a visualization or finite attack search would not establish a safe region or a topological separation.</p>
-  <p class="mats-linkline"><a href="./notes/proposed-study.html">Detailed study note</a> · <a href="./assets/activation-monitor-generalization-note.pdf">Original research note (PDF)</a></p>
+  <p class="activation-linkline"><a href="./notes/proposed-study.html">Detailed study note</a></p>
 </section>
 
 <section id="work">
   <h2>Previous work</h2>
   <p>These projects concern which distinctions can be recovered from observations, which can be discarded without changing useful decisions, and how internal measurements relate to behavior.</p>
-  <article class="mats-work">
-    <p class="mats-status">Public arXiv preprint · October 2026</p>
+  <article class="activation-work">
+    <p class="activation-status">Public arXiv preprint · October 2026</p>
     <h3>The Identifiability and Observability of Deep Normalized Attention</h3>
     <p>I study which parameters of deep, unmasked, single-head attention are determined by its input–output function. For known positive nonconstant real-analytic normalizers, the paper establishes generic identification of the effective scores and combined value map, up to signs induced by even normalizers. It then classifies exceptional fibers under explicit conditions and quantifies the loss of numerical sensitivity near collapse. The distinction between exact identification and reliable recovery motivates my interest in what a monitor’s observations can establish.</p>
-    <p class="mats-linkline"><a href="https://arxiv.org/abs/2610.09620">arXiv:2610.09620</a> · <a href="./assets/attention-identifiability-preprint.pdf">Author’s PDF</a> · <a href="./notes/attention-observability.html">Numerical experiment note</a></p>
+    <p class="activation-linkline"><a href="https://arxiv.org/abs/2610.09620">arXiv:2610.09620</a> · <a href="./assets/attention-identifiability-preprint.pdf">Author’s PDF</a> · <a href="./notes/attention-observability.html">Numerical experiment note</a></p>
   </article>
-  <article class="mats-work">
-    <p class="mats-status">MARS · Preprint in progress</p>
+  <article class="activation-work">
+    <p class="activation-status">MARS · Preprint in progress</p>
     <h3>What Can Cooperative Agents Forget?</h3>
     <p>This project studies information compression in finite program games with authentic committed sources. It asks when agents can discard distinctions about their partners while preserving specified cooperative guarantees. The draft combines exact and robust decision criteria with experiments on Qwen3-written programs. Those experiments measure cooperation, finite deviation gain, and downside risk separately: increased cooperation or better average compliance need not provide uniform protection.</p>
-    <p class="mats-linkline"><a href="./assets/mars-working-preprint.pdf">Read the working draft</a> · <a href="./notes/mars-experiments.html">Population experiment note</a></p>
+    <p class="activation-linkline"><a href="./assets/mars-working-preprint.pdf">Read the working draft</a> · <a href="./notes/mars-experiments.html">Population experiment note</a></p>
   </article>
-  <article class="mats-work">
-    <p class="mats-status">Public arXiv preprint · June 2026</p>
+  <article class="activation-work">
+    <p class="activation-status">Public arXiv preprint · June 2026</p>
     <h3>Transformers Learn the Mestre–Nagao Heuristic</h3>
     <p>I trained a small transformer to classify rational elliptic curves of rank zero or one from Frobenius traces, then studied the computation using probes, activation patching, and circuit analysis. The paper reports a close match between a discriminating neuron’s input weights and the Mestre–Nagao heuristic. It also distinguishes predictive activation information from attention weights and causal information flow.</p>
-    <p class="mats-linkline"><a href="https://arxiv.org/abs/2606.15036">arXiv:2606.15036</a></p>
+    <p class="activation-linkline"><a href="https://arxiv.org/abs/2606.15036">arXiv:2606.15036</a></p>
   </article>
 </section>
 
 <section id="notes">
   <h2>Experiment notes</h2>
   <p>My earlier small-model monitor study supplies a concrete transfer failure. The development-selected detector separated constructed candidate actions perfectly, but its AUROC fell to 0.590 on arithmetic stress actions and 0.525 on inventory stress actions. Only six of 96 stress episodes contained verified violations, including one positive inventory task instance. These results motivate a better controlled experiment; they do not establish a general limit of activation monitoring.</p>
-  <div class="mats-table-wrap">
+  <div class="activation-table-wrap">
     <table>
       <caption>Completed measurements and the next proposed study</caption>
       <thead><tr><th scope="col">Note</th><th scope="col">Evidence and status</th></tr></thead>
@@ -86,10 +86,10 @@
       </tbody>
     </table>
   </div>
-  <p class="mats-small">The notes link to papers and saved numerical summaries. They distinguish manuscript-reported results, exploratory analyses, and proposed work.</p>
+  <p class="activation-small">The notes link to papers and saved numerical summaries. They distinguish manuscript-reported results, exploratory analyses, and proposed work.</p>
 </section>
 
-<footer class="mats-footer">
+<footer class="activation-footer">
   <p><a href="https://pranavkonda.com/contact">Contact</a> · <a href="https://pranavkonda.com/projects">Other projects</a></p>
 </footer>
 
