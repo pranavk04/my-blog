@@ -39,3 +39,9 @@ The Mestre–Nagao preprint links to `https://arxiv.org/abs/2606.15036`.
 The three probe summary JSON files are copies of saved local experiment artifacts. The two `*-paper-measurements.json` files are manuscript transcriptions, not new computational replays. `source-manifest.json` records hashes for the original supplied artifacts. The author's attention reproducibility archive is included intact.
 
 The main page and notes distinguish completed measurements, exploratory controls, manuscript-reported results, and the proposed follow-up. Building or reviewing this page does not rerun inference or validate the mathematical proofs.
+
+## Production-base provenance
+
+The restored website base is `d290adb9b0aba9e8be42a2812da9bcd845cd4609`, the commit recorded by Vercel deployment `dpl_6Nz6LZEMTjGfJjV5ySt3gULH5VYh` as the last successful production deployment before this page was added. The restore merge retains the MATS sources, papers, notes, and hosting compatibility fix. Blog, Recs, and CV routes are absent; the external Blog navigation link and its home-page description were also removed at the author's request.
+
+For subsequent website releases, check the current production deployment's commit and branch before selecting a base. The repository's default branch previously pointed to an older site tree.
