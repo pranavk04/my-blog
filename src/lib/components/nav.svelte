@@ -7,7 +7,6 @@
 		</div>
 
 	<div class="flex py-2 px-3 fill-current sm:items-center sm:w-auto">
-		<a href="/about" class="font-semibold ml-2 sm:ml-5 sm:text-3xl text-lg">About</a>
 	<a href="/projects" class="font-semibold ml-2 sm:ml-5 sm:text-3xl text-lg">Projects</a>
 	</div>
 	</div>

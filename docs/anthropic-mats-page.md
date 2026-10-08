@@ -4,7 +4,7 @@ The native SvelteKit route is `/anthropic-mats/`. It imports `AnthropicMats.svel
 
 The page is linked from `/projects`. Its relative paper and note links depend on the route's `trailingSlash = 'always'` setting. Static resources live in `static/anthropic-mats/`.
 
-The earlier `/ant-mats-supplement/` URL is preserved with a short page linking the original research-note PDF and the updated direction. This route was absent from the prior SvelteKit production checkout.
+The earlier `/ant-mats-supplement/` URL redirects directly to `/anthropic-mats/` with a permanent 308 response. There is no separate landing page for the original note.
 
 ## Deployment compatibility
 
@@ -30,7 +30,7 @@ The standalone version at `/anthropic-mats/standalone.html` can be linked or emb
 
 ## Papers and evidence
 
-The attention PDF is the author-supplied `main-arxiv.pdf`. Its current status is **submitted to arXiv; processing**. Add the verified public arXiv URL to the main content fragment after processing; do not infer an ID or automatically change status based on a clock. Keep the direct PDF link as an accessible fallback.
+The attention paper is now public at `https://arxiv.org/abs/2610.09620`, verified against its title and author on arXiv. The local PDF remains the author-supplied `main-arxiv.pdf` and is labeled as the author's PDF. The main page, numerical note, and exported standalone page link to the public arXiv record.
 
 The MARS PDF is the author-supplied `sample_paper.pdf`, titled *What Can Cooperative Agents Forget?*, dated 6 October 2026. It is a working preprint. The MARS note's numerical table is transcribed from that draft and explicitly labeled as such.
 
@@ -45,3 +45,7 @@ The main page and notes distinguish completed measurements, exploratory controls
 The restored website base is `d290adb9b0aba9e8be42a2812da9bcd845cd4609`, the commit recorded by Vercel deployment `dpl_6Nz6LZEMTjGfJjV5ySt3gULH5VYh` as the last successful production deployment before this page was added. The restore merge retains the MATS sources, papers, notes, and hosting compatibility fix. Blog, Recs, and CV routes are absent; the external Blog navigation link and its home-page description were also removed at the author's request.
 
 For subsequent website releases, check the current production deployment's commit and branch before selecting a base. The repository's default branch previously pointed to an older site tree.
+
+## Current navigation
+
+The Projects page is a concise citation list linking the attention, Mestre–Nagao, and Khovanov-code papers to their verified public arXiv records, followed by MATS and the MARS working preprint. About is temporarily removed from navigation and routing; its source is preserved at `archived-pages/about/+page.svelte` for later restoration.
